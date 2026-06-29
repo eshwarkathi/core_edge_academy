@@ -1,0 +1,523 @@
+/* ===================================
+   CONTAINER
+=================================== */
+
+.container{
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+
+/* ===================================
+   PAGE
+=================================== */
+
+.enroll-page{
+  background:#020617;
+  color:white;
+  overflow:hidden;
+}
+/* ===================================
+   MAIN GRID
+=================================== */
+
+.enroll-wrapper{
+  display:grid;
+  grid-template-columns: 44% 56%;
+  gap:28px;
+  margin-top:-10px;
+  margin-bottom:30px;
+}
+
+/* ===================================
+   PREMIUM CARD
+=================================== */
+
+.premium-card{
+  background:
+  linear-gradient(
+  180deg,
+  rgba(10,18,45,.95),
+  rgba(4,8,25,.98));
+  
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:24px;
+
+  box-shadow:
+  0 0 40px rgba(255,82,82,.08);
+}
+
+/* ===================================
+   LEFT PANEL
+=================================== */
+
+.left-box{
+  padding:35px;
+  position:relative;
+}
+
+.small-title{
+  color:#ff5757;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.left-box h2{
+  margin-top:15px;
+  font-size:40px;
+  line-height:1.15;
+  font-weight:700;
+}
+
+.left-box h2 span{
+  color:#ff5757;
+}
+
+.left-box p{
+  font-size:20px;
+  line-height:1.8;
+  color:#b26363;
+  margin-top:20px;
+}
+
+.left-features{
+  margin-top:25px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.feature{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:18px;
+  border-radius:18px;
+  background:
+  rgba(255,255,255,.03);
+}
+
+.feature-icon{
+  width:50px;
+  height:50px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  background:
+  linear-gradient(
+  135deg,
+  #ff4b4b,
+  #ff7b7b);
+}
+
+.feature h4{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.feature p{
+  font-size:15px;
+  margin:0;
+}
+
+/* ===================================
+   PHONE CTA
+=================================== */
+
+.call-card{
+  margin-top:20px;
+
+  padding:15px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+  135deg,
+  #ff4b4b,
+  #ff7b7b);
+
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.call-card span{
+  font-size:28px;
+}
+
+.call-card h4{
+  font-size:22px;
+}
+
+/* ===================================
+   FORM
+=================================== */
+
+.form-box{
+  padding:30px;
+}
+
+.form-box h2{
+  font-size:45px;
+  font-weight:700;
+}
+
+.form-box h2 span{
+  color:#ff5757;
+}
+
+.form-box p{
+  color:#df8585;
+  margin-top:10px;
+}
+
+.form-grid{
+  margin-top:30px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+}
+
+.form-grid input,
+.form-grid select{
+  height:68px;
+
+  padding:0 20px;
+
+  border-radius:14px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  background:#071127;
+
+  color:white;
+
+  font-size:17px;
+}
+
+textarea{
+  grid-column:span 2;
+
+  height:180px;
+
+  padding:20px;
+
+  border-radius:14px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  background:#071127;
+
+  color:white;
+
+  resize:none;
+}
+
+.submit-btn{
+  width:100%;
+  margin-top:25px;
+
+  height:72px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+  linear-gradient(
+  90deg,
+  #ff4b4b,
+  #ff7b7b);
+
+  color:white;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+/* ===================================
+   CONTACT SECTION
+=================================== */
+
+/* ===================================
+   CONTACT + MAP SECTION
+=================================== */
+
+.contact-map-section{
+  display:grid;
+  grid-template-columns: 44% 56%;
+  gap:24px;
+  margin-top:30px;
+  align-items:stretch;
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+
+/* ======================
+   LEFT CONTACT PANEL
+====================== */
+
+.contact-details{
+  padding:35px;
+  border-radius:24px;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(10,18,45,.95),
+    rgba(4,8,25,.98)
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+  0 0 40px rgba(255,82,82,.08);
+
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-heading{
+  margin-bottom:25px;
+}
+
+.contact-heading h2{
+  font-size:42px;
+  line-height:1.1;
+  margin-bottom:12px;
+  font-weight:700;
+}
+
+.contact-heading span{
+  color:#ff5757;
+}
+
+.contact-heading p{
+  font-size:16px;
+  color:#b9c3d6;
+  line-height:1.7;
+}
+
+/* ======================
+   CONTACT CARDS
+====================== */
+
+.contact-cards{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.contact-card{
+  display:flex;
+  align-items:center;
+  gap:16px;
+
+  padding:10px;
+
+  border-radius:28px;
+
+  background:
+  rgba(255,255,255,.03);
+
+  border:
+  1px solid rgba(255,255,255,.05);
+
+  transition:.3s;
+}
+
+.contact-card:hover{
+  transform:translateY(-3px);
+
+  border-color:
+  rgba(255,87,87,.35);
+
+  box-shadow:
+  0 10px 30px rgba(255,87,87,.12);
+}
+
+.contact-card .icon{
+  width:50px;
+  height:50px;
+
+  flex-shrink:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:16px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ff4b4b,
+    #ff7b7b
+  );
+
+  font-size:28px;
+}
+
+.contact-card h4{
+  font-size:17px;
+  margin-bottom:5px;
+  color:#ffffff;
+}
+
+.contact-card h5{
+  font-size:18px;
+  margin-bottom:6px;
+  color:#ffffff;
+  font-weight:500;
+}
+
+.contact-card p{
+  font-size:14px;
+  color:#b9c3d6;
+  line-height:1.6;
+}
+
+/* ======================
+   MAP PANEL
+====================== */
+
+.map-box{
+  border-radius:24px;
+
+  overflow:hidden;
+
+  min-height:520px;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(10,18,45,.95),
+    rgba(4,8,25,.98)
+  );
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+  0 0 40px rgba(255,82,82,.08);
+}
+
+.map-box iframe{
+  width:90%;
+  height:90%;
+  min-height:600px;
+  border:none;
+  display:block;
+}
+
+/* ======================
+   TABLET
+====================== */
+
+@media(max-width:992px){
+
+  .contact-map-section{
+    grid-template-columns:1fr;
+  }
+
+  .map-box{
+    min-height:450px;
+  }
+
+  .map-box iframe{
+    min-height:450px;
+  }
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:768px){
+
+  .contact-details{
+    padding:25px;
+  }
+
+  .contact-heading h2{
+    font-size:32px;
+  }
+
+  .contact-card{
+    padding:15px;
+  }
+
+  .contact-card .icon{
+    width:50px;
+    height:50px;
+    font-size:22px;
+  }
+
+  .map-box{
+    min-height:350px;
+  }
+
+  .map-box iframe{
+    min-height:350px;
+  }
+}
+
+
+/* ===================================
+   CTA
+=================================== */
+
+.bottom-cta{
+  margin:40px 0;
+}
+
+.cta-content{
+  text-align:center;
+}
+
+.cta-content h2{
+  font-size:40px;
+}
+
+.cta-content span{
+  color:#ff5757;
+}
+
+.cta-content p{
+  font-size:20px;
+  color:#cfcfcf;
+  margin:20px auto;
+  max-width:550px;
+}
+
+.cta-btn{
+  padding:14px 30px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:
+  linear-gradient(
+  135deg,
+  #ff4b4b,
+  #ff7b7b);
+
+  color:white;
+
+  font-size:20px;
+
+  font-weight:600;
+}

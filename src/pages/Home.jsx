@@ -6,7 +6,7 @@ import WhyUs from "../components/WhyUs";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import HiringPartners from "../components/HiringPartners";
-
+import Enroll from "../pages/Enroll";
 import Successstories from "../components/Successstories";
 
 function Home() {

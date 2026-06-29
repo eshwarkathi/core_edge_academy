@@ -12,6 +12,7 @@ import FullStackDevelopment from "./pages/FullStackDevelopment";
 import FlutterDevelopment from "./pages/FlutterDevelopment";
 import CyberSecurity from "./pages/CyberSecurity";
 import TableauAI from "./pages/TableauAI";
+import Enroll from "./pages/Enroll";
 
 function App() {
   return (
@@ -68,6 +69,8 @@ function App() {
         path="/courses/tableau"
         element={<TableauAI />}
       />
+      <Route path="/enroll" element={<Enroll />} />
+
 
     </Routes>
   );

@@ -97,13 +97,12 @@ function Header() {
 
         {/* CTA */}
 
-        <div className="header-btn">
-          <button
-            onClick={() => handleNavigation("contact")}
-           >
-            Enroll Now
-          </button>
-        </div>
+        
+      <div className="header-btn">
+        <Link to="/Enroll">
+          <button>Enroll Now</button>
+        </Link>
+      </div>
 
         {/* Mobile */}
 
