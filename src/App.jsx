@@ -12,7 +12,7 @@ import FullStackDevelopment from "./pages/FullStackDevelopment";
 import FlutterDevelopment from "./pages/FlutterDevelopment";
 import CyberSecurity from "./pages/CyberSecurity";
 import TableauAI from "./pages/TableauAI";
-import Enroll from "./pages/Enroll";
+import Enroll from "./pages/Enroll.jsx";
 
 function App() {
   return (
