@@ -2390,43 +2390,43 @@ line-height:1.7;
 
 }
 .contact-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-margin-top:50px;
-
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:20px;
+    align-items:stretch;
 }
 
 .contact-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
 
-background:#141414;
+    min-height:160px;
 
-padding:30px;
+    padding:20px;
 
-border-radius:15px;
+    border-radius:22px;
 
-border:1px solid #252525;
+    background:rgba(255,255,255,.04);
 
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+}
+.contact-card p{
+    overflow-wrap:break-word;
+    word-break:break-word;
 }
 
 .contact-card h3{
-
-margin-bottom:15px;
-
-color:#ff5b6e;
-
+    margin:0 0 10px;
 }
 
 .contact-card p{
-
-line-height:1.8;
-
-color:#ddd;
-
+    margin:0;
+    line-height:1.0;
+    word-break:break-word;
 }
 /*======================*/
 /* TESTIMONIALS */
