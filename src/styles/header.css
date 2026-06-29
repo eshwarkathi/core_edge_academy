@@ -1,0 +1,338 @@
+/*==================================================
+                PREMIUM HEADER
+==================================================*/
+
+.header{
+
+    position:fixed;
+
+    top:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(1400px,94%);
+
+    z-index:9999;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+    transition:.35s;
+
+}
+
+.container{
+
+    width:94%;
+
+    margin:auto;
+
+}
+
+.header-wrapper{
+
+    height:82px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/*=====================================
+                LOGO
+======================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+}
+
+.logo img{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+}
+
+.logo:hover img{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h2{
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    margin:0;
+
+    line-height:1;
+
+}
+
+.logo-text span{
+
+    color:#ff7d72;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+/*=====================================
+            NAVIGATION
+======================================*/
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    list-style:none;
+
+}
+
+/* Remove button styles */
+
+.nav-links button{
+
+    position:relative;
+
+    background:none;
+
+    border:none;
+
+    color:#d6dce8;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    transition:.35s;
+
+}
+
+/* Hover */
+
+.nav-links button:hover{
+
+    color:white;
+
+    background:rgba(255,255,255,.06);
+
+}
+
+/* Animated underline */
+
+.nav-links button::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:3px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff5f6d,
+        #ff9671
+    );
+
+    transition:.35s;
+
+}
+
+.nav-links button:hover::after{
+
+    width:70%;
+
+}
+
+/*=====================================
+                BUTTON
+======================================*/
+
+.header-btn button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    padding:14px 30px;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff9671
+    );
+
+    transition:.35s;
+
+}
+
+.header-btn button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 45px rgba(255,95,109,.35);
+
+}
+
+/*=====================================
+            MOBILE
+======================================*/
+
+.mobile-menu{
+
+    display:none;
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+/*=====================================
+            RESPONSIVE
+======================================*/
+
+@media(max-width:1100px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.header-btn{
+
+display:none;
+
+}
+
+.mobile-menu{
+
+display:block;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+
+width:96%;
+
+top:10px;
+
+}
+
+.header-wrapper{
+
+height:72px;
+
+}
+
+.logo img{
+
+width:44px;
+
+height:44px;
+
+}
+
+.logo-text h2{
+
+font-size:20px;
+
+}
+
+.logo-text span{
+
+font-size:11px;
+
+letter-spacing:2px;
+
+}
+
+}

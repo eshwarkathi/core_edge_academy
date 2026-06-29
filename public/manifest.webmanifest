@@ -1,0 +1,20 @@
+{
+  "name": "Core Edge Academy — Industry-Ready IT Training",
+  "short_name": "Core Edge",
+  "description": "Industry-ready IT training in AI, DevOps, Full Stack, Data Analytics, Cyber Security and more. 100% practical, live projects, placement support. Ameerpet, Hyderabad.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07070c",
+  "theme_color": "#07070c",
+  "lang": "en-IN",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "1120x1120",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
