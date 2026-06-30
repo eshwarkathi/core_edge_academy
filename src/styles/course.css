@@ -1780,3 +1780,276 @@ flex-direction:column;
 }
 
 }
+/*==================================================
+                TABLET
+==================================================*/
+
+@media (max-width: 1024px){
+
+.course-layout{
+
+    grid-template-columns:1fr;
+    gap:40px;
+
+}
+
+.course-sidebar{
+
+    position:static;
+
+}
+
+.course-content{
+
+    order:1;
+
+}
+
+.course-sidebar{
+
+    order:2;
+
+}
+
+}
+
+
+/*==================================================
+                MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+.container{
+
+    width:94%;
+
+}
+
+.course-layout{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+}
+
+.course-hero{
+
+    padding:90px 0 40px;
+
+    text-align:center;
+
+}
+
+.course-hero h1{
+
+    font-size:34px;
+
+    line-height:1.25;
+
+}
+
+.course-hero p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.course-content{
+
+    order:1;
+
+}
+
+.course-sidebar{
+
+    order:2;
+
+    position:static;
+
+}
+
+.course-description{
+
+    padding:25px;
+
+}
+
+.course-description h2{
+
+    font-size:28px;
+
+}
+
+.course-description p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.course-highlights{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.highlight-card{
+
+    padding:20px;
+
+}
+
+.highlight-card h3{
+
+    font-size:22px;
+
+}
+
+.highlight-card p{
+
+    font-size:16px;
+
+}
+
+.sidebar-card{
+
+    padding:25px;
+
+}
+
+.sidebar-card h2{
+
+    font-size:28px;
+
+}
+
+.course-stats{
+
+    gap:16px;
+
+}
+
+.stat-card{
+
+    padding:18px;
+
+}
+
+.stat-card i,
+.stat-card svg{
+
+    font-size:24px;
+
+}
+
+.stat-card h3{
+
+    font-size:18px;
+
+}
+
+.stat-card p{
+
+    font-size:14px;
+
+}
+
+.enroll-btn{
+
+    height:56px;
+
+    font-size:18px;
+
+}
+
+}
+
+
+/*==================================================
+            SMALL MOBILE
+==================================================*/
+
+@media (max-width:480px){
+
+.container{
+
+    width:92%;
+
+}
+
+.course-hero{
+
+    padding-top:80px;
+
+}
+
+.course-hero h1{
+
+    font-size:30px;
+
+}
+
+.course-hero p{
+
+    font-size:16px;
+
+}
+
+.course-description{
+
+    padding:20px;
+
+}
+
+.course-description h2{
+
+    font-size:24px;
+
+}
+
+.course-description p{
+
+    font-size:15px;
+
+}
+
+.sidebar-card{
+
+    padding:20px;
+
+}
+
+.stat-card{
+
+    padding:16px;
+
+}
+
+.stat-card h3{
+
+    font-size:17px;
+
+}
+
+.stat-card p{
+
+    font-size:13px;
+
+}
+
+.enroll-btn{
+
+    height:52px;
+
+    font-size:17px;
+
+}
+
+}

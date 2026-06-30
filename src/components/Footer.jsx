@@ -97,7 +97,7 @@ function Footer() {
         </a>
 
         <a
-          href=""
+          href="https://youtube.com/@coreedgeacademy?si=_OysbXJ89YSH1n-I"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="YouTube"

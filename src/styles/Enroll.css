@@ -521,3 +521,307 @@ textarea{
 
   font-weight:600;
 }
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media screen and (max-width:1024px){
+
+.container{
+    width:94%;
+}
+
+.enroll-wrapper{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.left-box,
+.form-box{
+    padding:30px;
+}
+
+.left-box h2,
+.form-box h2{
+    font-size:36px;
+}
+
+.left-box p{
+    font-size:18px;
+}
+
+.form-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.contact-map-section{
+    grid-template-columns:1fr;
+    gap:25px;
+    width:94%;
+}
+
+.map-box{
+    min-height:420px;
+}
+
+.map-box iframe{
+    width:100%;
+    height:420px;
+    min-height:420px;
+}
+
+.cta-content h2{
+    font-size:34px;
+}
+
+.cta-content p{
+    font-size:18px;
+}
+
+}
+
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media screen and (max-width:768px){
+
+.container{
+    width:95%;
+}
+
+.enroll-page{
+    padding-top:90px;
+}
+
+.enroll-wrapper{
+    grid-template-columns:1fr;
+    gap:25px;
+    margin-top:0;
+}
+
+.left-box,
+.form-box{
+    padding:22px;
+}
+
+.small-title{
+    font-size:13px;
+}
+
+.left-box h2,
+.form-box h2{
+    font-size:30px;
+    line-height:1.2;
+}
+
+.left-box p{
+    font-size:16px;
+    line-height:1.7;
+}
+
+.feature{
+    padding:14px;
+    gap:12px;
+}
+
+.feature-icon{
+    width:45px;
+    height:45px;
+    font-size:22px;
+    border-radius:14px;
+}
+
+.feature h4{
+    font-size:18px;
+}
+
+.feature p{
+    font-size:14px;
+}
+
+.call-card{
+    flex-direction:column;
+    text-align:center;
+    gap:12px;
+}
+
+.call-card h4{
+    font-size:18px;
+}
+
+.form-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+}
+
+.form-grid input,
+.form-grid select{
+    height:56px;
+    font-size:15px;
+}
+
+textarea{
+    grid-column:span 1;
+    height:150px;
+    font-size:15px;
+}
+
+.submit-btn{
+    height:58px;
+    font-size:18px;
+}
+
+.contact-map-section{
+    grid-template-columns:1fr;
+    width:95%;
+    gap:20px;
+}
+
+.contact-details{
+    padding:22px;
+}
+
+.contact-heading h2{
+    font-size:28px;
+}
+
+.contact-heading p{
+    font-size:15px;
+}
+
+.contact-card{
+    padding:15px;
+    gap:12px;
+}
+
+.contact-card .icon{
+    width:45px;
+    height:45px;
+    font-size:20px;
+}
+
+.contact-card h4{
+    font-size:16px;
+}
+
+.contact-card h5{
+    font-size:16px;
+}
+
+.contact-card p{
+    font-size:14px;
+}
+
+.map-box{
+    min-height:300px;
+}
+
+.map-box iframe{
+    width:100%;
+    height:300px;
+    min-height:300px;
+}
+
+.bottom-cta{
+    margin:30px 0;
+}
+
+.cta-content h2{
+    font-size:28px;
+}
+
+.cta-content p{
+    font-size:16px;
+}
+
+.cta-btn{
+    width:100%;
+    padding:14px;
+    font-size:17px;
+}
+
+}
+
+
+/*=========================================================
+                SMALL MOBILE
+=========================================================*/
+
+@media screen and (max-width:480px){
+
+.left-box,
+.form-box,
+.contact-details{
+    padding:18px;
+}
+
+.left-box h2,
+.form-box h2{
+    font-size:26px;
+}
+
+.left-box p{
+    font-size:15px;
+}
+
+.feature{
+    flex-direction:column;
+    text-align:center;
+}
+
+.feature-icon{
+    margin-bottom:8px;
+}
+
+.form-grid input,
+.form-grid select{
+    height:52px;
+    font-size:14px;
+}
+
+textarea{
+    height:130px;
+}
+
+.submit-btn{
+    height:54px;
+    font-size:16px;
+}
+
+.contact-heading h2{
+    font-size:24px;
+}
+
+.contact-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.contact-card .icon{
+    margin-bottom:8px;
+}
+
+.map-box{
+    min-height:250px;
+}
+
+.map-box iframe{
+    height:250px;
+    min-height:250px;
+}
+
+.cta-content h2{
+    font-size:24px;
+}
+
+.cta-content p{
+    font-size:15px;
+}
+
+.cta-btn{
+    font-size:16px;
+}
+
+}

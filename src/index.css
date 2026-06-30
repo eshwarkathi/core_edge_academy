@@ -218,6 +218,7 @@ ul, ol { list-style: none; }
 
 }
 
+
 /*================================*/
 
 .hero::before{
@@ -420,6 +421,8 @@ ul, ol { list-style: none; }
 
 }
 
+
+
 .grad{
 
     background:linear-gradient(
@@ -483,6 +486,10 @@ ul, ol { list-style: none; }
 
     padding:0;
 
+}
+
+.hero {
+  color: #ff6d73;
 }
 
 .hero-stats div{
@@ -2383,6 +2390,19 @@ border-radius:12px;
 overflow:hidden;
 
 }
+.faq-layout{
+  color: #ff6d73;
+}
+
+.faq p{
+  color: #ff7b70;
+}
+
+.faq-item.open{
+  color: #ff5f6d;
+}
+
+
 
 .faq-question{
 
@@ -2468,111 +2488,473 @@ line-height:1.7;
 /* TESTIMONIALS */
 /*======================*/
 
-.testimonial-grid{
+/*=========================================================
+                SUCCESS STORIES
+=========================================================*/
 
-display:grid;
+#successstories{
 
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    position:relative;
 
-gap:30px;
+    overflow:hidden;
 
-margin-top:50px;
+    padding:100px 6%;
+
+    background:#070B14;
 
 }
 
+/* Background Glow */
+
+#successstories::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    left:-180px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(255,95,109,.16),
+    transparent);
+
+    filter:blur(120px);
+
+}
+
+#successstories::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    right:-180px;
+
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(255,150,113,.14),
+    transparent);
+
+    filter:blur(120px);
+
+}
+
+/*=========================================================
+                SLIDER
+=========================================================*/
+
+.testimonial-slider{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:70px;
+
+}
+
+.testimonial-track{
+
+    display:flex;
+
+    width:max-content;
+
+    gap:28px;
+
+    animation:scrollTestimonials 65s linear infinite;
+
+}
+
+.testimonial-slider:hover .testimonial-track{
+
+    animation-play-state:paused;
+
+}
+
+/*=========================================================
+                CARD
+=========================================================*/
+
 .testimonial-card{
 
-background:#151515;
+    position:relative;
 
-padding:35px;
+    width:360px;
 
-border-radius:20px;
+    padding:32px;
 
-border:1px solid #2d2d2d;
+    border-radius:28px;
 
-transition:.35s;
+    overflow:hidden;
 
-text-align:center;
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
 
 }
 
 .testimonial-card:hover{
 
-transform:translateY(-8px);
+    transform:translateY(-10px);
 
-border-color:#ff5b6e;
+    border-color:#ff6d73;
+
+    box-shadow:
+
+    0 25px 55px rgba(255,95,109,.20);
 
 }
+
+.testimonial-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    right:-70px;
+
+    top:-70px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,95,109,.18),
+
+        transparent
+
+    );
+
+}
+
+/*=========================================================
+                AVATAR
+=========================================================*/
 
 .student-avatar{
 
-width:90px;
+    width:75px;
 
-height:90px;
+    height:75px;
 
-border-radius:50%;
+    border-radius:50%;
 
-background:#ff5b6e;
+    display:flex;
 
-color:white;
+    justify-content:center;
 
-display:flex;
+    align-items:center;
 
-align-items:center;
+    font-size:30px;
 
-justify-content:center;
+    font-weight:700;
 
-font-size:38px;
+    color:white;
 
-font-weight:bold;
+    margin-bottom:22px;
 
-margin:auto;
+    background:
 
-margin-bottom:20px;
+    linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff9671
+    );
+
+    box-shadow:
+
+    0 15px 35px rgba(255,95,109,.35);
 
 }
+
+/*=========================================================
+                NAME
+=========================================================*/
+
+.testimonial-card h3{
+
+    color:white;
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+/*=========================================================
+                COURSE
+=========================================================*/
 
 .course-name{
 
-color:#ff5b6e;
+    color:#ff9671;
 
-margin:10px 0;
+    font-size:17px;
 
-font-weight:600;
+    margin-bottom:15px;
 
 }
 
+/*=========================================================
+                RATING
+=========================================================*/
+
 .rating{
 
-font-size:22px;
+    font-size:18px;
 
-margin:15px 0;
+    margin-bottom:18px;
+
+}
+
+/*=========================================================
+                REVIEW
+=========================================================*/
+
+.review{
+
+    color:#BFC7D8;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    min-height:120px;
+
+}
+
+/*=========================================================
+                PACKAGE
+=========================================================*/
+
+.package{
+
+    margin-top:22px;
+
+    color:#3DDC84;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/*=========================================================
+                PLACED
+=========================================================*/
+
+.placed-at{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff9671
+    );
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+                ANIMATION
+=========================================================*/
+
+@keyframes scrollTestimonials{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media(max-width:1024px){
+
+.testimonial-card{
+
+width:320px;
+
+padding:28px;
 
 }
 
 .review{
 
-color:#cfcfcf;
-
-line-height:1.8;
-
-margin-bottom:25px;
+min-height:140px;
 
 }
 
-.placed-at{
+}
 
-background:#202020;
+/*=========================================================
+                MOBILE
+=========================================================*/
 
-padding:10px 20px;
+@media(max-width:768px){
 
-border-radius:50px;
+#successstories{
 
-display:inline-block;
+padding:80px 20px;
 
-font-weight:600;
+}
 
-color:white;
+.testimonial-slider{
+
+margin-top:45px;
+
+}
+
+.testimonial-track{
+
+gap:18px;
+
+animation-duration:45s;
+
+}
+
+.testimonial-card{
+
+width:290px;
+
+padding:22px;
+
+}
+
+.student-avatar{
+
+width:60px;
+
+height:60px;
+
+font-size:24px;
+
+}
+
+.testimonial-card h3{
+
+font-size:20px;
+
+}
+
+.course-name{
+
+font-size:15px;
+
+}
+
+.review{
+
+font-size:14px;
+
+min-height:auto;
+
+}
+
+.package{
+
+font-size:18px;
+
+}
+
+}
+
+/*=========================================================
+            SMALL MOBILE
+=========================================================*/
+
+@media(max-width:480px){
+
+.testimonial-card{
+
+width:260px;
+
+padding:18px;
+
+}
+
+.student-avatar{
+
+width:55px;
+
+height:55px;
+
+font-size:22px;
+
+}
+
+.testimonial-card h3{
+
+font-size:18px;
+
+}
+
+.review{
+
+font-size:13px;
+
+}
+
+.package{
+
+font-size:17px;
+
+}
 
 }
 /* =========================================
@@ -3474,6 +3856,9 @@ font-size:16px;
     
 }
 
+.sec-head h2{
+  color:#ff6d73;
+}
 .logo-slider{
 
     width:100%;
@@ -3634,4 +4019,8 @@ font-size:18px;
     font-size:18px;
 }
 
+}
+
+.hero-content p{
+  color: #f5877d;
 }

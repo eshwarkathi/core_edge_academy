@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
 import "../styles/home-course-section.css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 const COURSES = [
   {
     id: "ai",
@@ -79,35 +86,76 @@ function CourseSection() {
 
       </div>
 
-      <div className="home-course-grid">
+      <Swiper
+  modules={[Autoplay, Pagination]}
+  spaceBetween={24}
+  slidesPerView={4}
+  grabCursor={true}
+  loop={true}
+  centeredSlides={false}
+  pagination={{
+    clickable: true,
+  }}
+  autoplay={{
+    delay: 1000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  }}
+  breakpoints={{
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+    },
+    576: {
+      slidesPerView: 1.8,
+      spaceBetween: 18,
+    },
+    768: {
+      slidesPerView: 2.3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 22,
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  }}
+  className="courseSwiper"
+>
 
         {COURSES.map((course) => (
 
-          <Link
-            key={course.id}
-            to={`/courses/${course.id}`}
-            className="home-course-card"
-          >
+          <SwiperSlide key={course.id}>
 
-            <span className="home-course-icon">
-              {course.icon}
-            </span>
+            <Link
+              to={`/courses/${course.id}`}
+              className="home-course-card"
+            >
 
-            <h3>{course.title}</h3>
+              <span className="home-course-icon">
+                {course.icon}
+              </span>
 
-            <p className="home-course-tag">
-              {course.subtitle}
-            </p>
+              <h3>{course.title}</h3>
 
-            <span className="home-course-link">
-              View Details →
-            </span>
+              <p className="home-course-tag">
+                {course.subtitle}
+              </p>
 
-          </Link>
+              <span className="home-course-link">
+                View Details →
+              </span>
+
+            </Link>
+
+          </SwiperSlide>
 
         ))}
 
-      </div>
+      </Swiper>
 
     </section>
   );

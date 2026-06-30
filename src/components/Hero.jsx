@@ -15,7 +15,8 @@ function Hero() {
         <h1>
           Build Your Tech Career
           <br />
-          with Core Edge Academy
+         <span> with Core Edge Academy</span>
+
         </h1>
 
         <p>

@@ -1,76 +1,187 @@
-function Successstories() {
 
+function Scuccessstories() {
   const reviews = [
     {
-      name: "Rohit Kumar",
-      course: "Full Stack Development",
-      company: "Infosys",
+      name: "Venkata Ramana",
+      course: "Test Engineer",
+      package: "5.2 LPA",
       review:
-        "Core Edge Academy helped me become industry ready. The trainers, projects and mock interviews helped me crack my interview.",
-      rating: "⭐⭐⭐⭐⭐"
+        "Learning through live projects made technical interviews much easier.",
     },
     {
-      name: "Sai Teja",
-      course: "Artificial Intelligence",
-      company: "TCS",
+      name: "Abhishek",
+      course: "Test Engineer",
+      package: "8 LPA",
       review:
-        "The AI course covered everything from Python to Generative AI. Placement support was excellent.",
-      rating: "⭐⭐⭐⭐⭐"
+        "Core Edge Academy provided excellent interview preparation and hands-on testing projects. The placement support helped me secure my dream job.",
     },
     {
-      name: "Priya Sharma",
-      course: "Automation Testing",
-      company: "Accenture",
+      name: "Leela",
+      course: "Full Stack Developer",
+      package: "5.5 LPA",
       review:
-        "Best institute for Selenium and Java. Live projects made interviews very easy.",
-      rating: "⭐⭐⭐⭐⭐"
-    }
+        "The trainers explained every concept with real-time examples. Live projects improved my confidence during interviews.",
+    },
+    {
+      name: "Satyaneelima",
+      course: "Full Stack Developer",
+      package: "4.8 LPA",
+      review:
+        "Excellent faculty and practical assignments. Every class helped me improve my coding skills.",
+    },
+    {
+      name: "Anil Kumar",
+      course: "Test Engineer",
+      package: "7.1 LPA",
+      review:
+        "Mock interviews and resume preparation played a huge role in getting my placement.",
+    },
+    {
+      name: "Anusha",
+      course: "Full Stack Developer",
+      package: "9 LPA",
+      review:
+        "The Full Stack course was industry-oriented and helped me crack multiple interviews.",
+    },
+    {
+      name: "Prashanth",
+      course: ".NET Developer",
+      package: "8 LPA",
+      review:
+        "The trainers were highly experienced and guided me throughout the placement journey.",
+    },
+    {
+      name: "Avanika",
+      course: "Full Stack Developer",
+      package: "5.2 LPA",
+      review:
+        "The placement team was very supportive. I highly recommend Core Edge Academy.",
+    },
+    {
+      name: "Anand",
+      course: "Scrum Master",
+      package: "₹14 LPA",
+      review:
+        "The Scrum Master program covered Agile practices in depth with real-world case studies.",
+    },
+    {
+      name: "Vinay",
+      course: "Scrum Master",
+      package: "12 LPA",
+      review:
+        "Every session was interactive and helped me confidently attend interviews.",
+    },
+    {
+      name: "Areef",
+      course: "Network Test Engineer",
+      package: "12 LPA",
+      review:
+        "Excellent networking concepts, practical labs and interview guidance.",
+    },
+    {
+      name: "Abhishek Naveen Raj",
+      course: "Scrum Master",
+      package: "10.8 LPA",
+      review:
+        "The certification training and placement support exceeded my expectations.",
+    },
+    {
+      name: "Aeshitha",
+      course: "Scrum Master",
+      package: "15 LPA",
+      review:
+        "Highly professional trainers with excellent placement assistance.",
+    },
+    {
+      name: "Rohan",
+      course: "Scrum Master",
+      package: "12 LPA",
+      review:
+        "Every topic was explained with practical examples that helped me during interviews.",
+    },
+    {
+      name: "Vishnu",
+      course: "Scrum Master",
+      package: "21 LPA",
+      review:
+        "The best training institute for Agile and Scrum with excellent placement support.",
+    },
+    {
+      name: "Tharun",
+      course: "Scrum Master",
+      package: "11 LPA",
+      review:
+        "A well-structured course with excellent mentors and placement guidance.",
+    },
+    
   ];
 
   return (
-    <section className="section" id="Scuccessstories">
+    <section className="section" id="Successstories">
 
       <div className="sec-head">
-        <p className="eyebrow">~/testimonials</p>
-        <h2>Student Success Stories</h2>
+
+        <p className="eyebrow">~/placements</p>
+
+        <h2>Our Success Stories</h2>
+
         <p className="sec-sub">
-          Hear from our students who successfully started their careers.
+          Hundreds of students have transformed their careers with Core Edge Academy.
         </p>
+
       </div>
 
-      <div className="testimonial-grid">
+      <div className="testimonial-slider">
 
-        {reviews.map((item) => (
+        <div className="testimonial-track">
 
-          <div className="testimonial-card" key={item.name}>
+          {[...reviews, ...reviews].map((item, index) => (
 
-            <div className="student-avatar">
+            <div className="testimonial-card" key={index}>
 
-              {item.name.charAt(0)}
+              <div className="student-avatar">
+
+                {item.name.charAt(0)}
+
+              </div>
+
+              <h3>{item.name}</h3>
+
+              <p className="course-name">
+
+                {item.course}
+
+              </p>
+
+              <div className="rating">
+
+                ⭐⭐⭐⭐⭐
+
+              </div>
+
+              <p className="review">
+
+                "{item.review}"
+
+              </p>
+
+              <div className="package">
+
+                💰 {item.package}
+
+              </div>
+
+              <span className="placed-at">
+
+                ✅ Successfully Placed
+
+              </span>
 
             </div>
 
-            <h3>{item.name}</h3>
+          ))}
 
-            <p className="course-name">
-              {item.course}
-            </p>
-
-            <div className="rating">
-              {item.rating}
-            </div>
-
-            <p className="review">
-              "{item.review}"
-            </p>
-
-            <span className="placed-at">
-              🚀 Placed at {item.company}
-            </span>
-
-          </div>
-
-        ))}
+        </div>
 
       </div>
 
@@ -78,4 +189,4 @@ function Successstories() {
   );
 }
 
-export default Successstories;
+export default Scuccessstories;
