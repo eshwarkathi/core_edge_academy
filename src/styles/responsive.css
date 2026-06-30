@@ -1,0 +1,653 @@
+/*=========================================================
+                    TABLET
+=========================================================*/
+
+@media screen and (max-width:1024px){
+
+html{
+    font-size:95%;
+}
+
+.container,
+.section{
+    width:94%;
+    margin:auto;
+}
+
+.header{
+    width:96%;
+}
+
+.hero{
+    padding:140px 0 80px;
+}
+
+.hero-content{
+    max-width:100%;
+}
+
+.hero-content h1{
+    font-size:58px;
+    line-height:1.1;
+}
+
+.hero-content p{
+    font-size:18px;
+    max-width:700px;
+}
+
+.hero-buttons{
+    gap:18px;
+}
+
+.hero-buttons button{
+    padding:16px 30px;
+}
+
+.hero-stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.course-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.why-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.aud-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.testimonial-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.footer-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/*=========================================================
+                    MOBILE
+=========================================================*/
+
+@media screen and (max-width:768px){
+
+html{
+    font-size:90%;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+.container,
+.section{
+    width:92%;
+    margin:auto;
+}
+
+/*==========================
+        HEADER
+===========================*/
+
+.header{
+    width:95%;
+    top:15px;
+    padding:14px 18px;
+    border-radius:22px;
+}
+
+.header-wrapper{
+    height:70px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.logo h2{
+    font-size:32px;
+}
+
+.logo span{
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+nav{
+    display:none;
+}
+
+.header-btn{
+    display:none;
+}
+
+.mobile-menu{
+    display:flex;
+    font-size:34px;
+}
+
+/*==========================
+        HERO
+===========================*/
+
+.hero{
+    min-height:auto;
+    padding:120px 0 70px;
+    text-align:center;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero-tag,
+.prompt{
+    margin:auto;
+    margin-bottom:24px;
+}
+
+.hero-content h1,
+.hero-h1{
+    font-size:42px;
+    line-height:1.15;
+}
+
+.hero-content p,
+.hero-lede{
+    font-size:18px;
+    line-height:1.8;
+    max-width:100%;
+}
+
+.hero-buttons,
+.hero-cta{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:40px;
+}
+
+.hero-buttons button,
+.btn{
+    width:100%;
+}
+
+.hero-stats{
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+/*==========================
+        COMMON SECTIONS
+===========================*/
+
+.sec-head h2{
+    font-size:40px;
+}
+
+.sec-sub{
+    font-size:18px;
+}
+
+/*==========================
+        COURSE
+===========================*/
+
+.course-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.card{
+    padding:32px;
+}
+
+.card h3{
+    font-size:30px;
+}
+
+.card p{
+    font-size:18px;
+}
+
+/*==========================
+        AUDIENCE
+===========================*/
+
+.aud-grid{
+    grid-template-columns:1fr;
+}
+
+.aud{
+    padding:35px;
+}
+
+/*==========================
+        WHY US
+===========================*/
+
+.why-grid{
+    grid-template-columns:1fr;
+}
+
+.why-card{
+    padding:35px;
+}
+
+/*==========================
+        TESTIMONIAL
+===========================*/
+
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+
+.testimonial-card{
+    padding:35px;
+}
+
+/*==========================
+        HIRING
+===========================*/
+
+.logo-card{
+    width:170px;
+    height:90px;
+}
+
+.logo-card img{
+    max-width:110px;
+}
+
+/*==========================
+        FAQ
+===========================*/
+
+.faq-item{
+    padding:24px;
+}
+
+.faq-question{
+    font-size:20px;
+}
+
+/*==========================
+        CONTACT
+===========================*/
+
+.contact-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.contact-card{
+    width:100%;
+    min-height:auto;
+    padding:30px;
+}
+
+/*==========================
+        FOOTER
+===========================*/
+
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+    text-align:center;
+}
+
+.footer-links{
+    justify-content:center;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    gap:20px;
+}
+
+}
+
+
+/*=========================================================
+                SMALL MOBILE
+=========================================================*/
+
+@media screen and (max-width:480px){
+
+.hero-content h1,
+.hero-h1{
+    font-size:34px;
+}
+
+.hero-content p,
+.hero-lede{
+    font-size:16px;
+}
+
+.sec-head h2{
+    font-size:32px;
+}
+
+.card{
+    padding:26px;
+}
+
+.card h3{
+    font-size:26px;
+}
+
+.aud,
+.why-card,
+.testimonial-card,
+.contact-card{
+    padding:24px;
+}
+
+.logo img{
+    width:38px;
+}
+
+.logo h2{
+    font-size:26px;
+}
+
+.logo span{
+    font-size:12px;
+}
+
+.mobile-menu{
+    font-size:30px;
+}
+
+.hero-buttons button,
+.btn{
+    padding:15px 22px;
+}
+
+}
+
+/*=========================================================
+            COURSE PAGE RESPONSIVE
+=========================================================*/
+
+@media screen and (max-width:1024px){
+
+.course-hero{
+
+    padding:140px 5% 80px;
+
+}
+
+.hero-container{
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    order:1;
+
+}
+
+.hero-image-box{
+
+    order:2;
+
+    justify-content:center;
+
+}
+
+.hero-image{
+
+    width:420px;
+
+    max-width:100%;
+
+}
+
+.hero-content p{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+/*=========================================================
+                SMALL MOBILE
+=========================================================*/
+
+@media screen and (max-width:480px){
+
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+.hero-content h2{
+
+    font-size:26px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.hero-image{
+
+    width:240px;
+
+}
+
+.hero-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-stat{
+
+    padding:16px;
+
+}
+
+.hero-stat strong{
+
+    font-size:18px;
+
+}
+
+.hero-stat span{
+
+    font-size:13px;
+
+}
+
+.tools-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.company-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+/*=====================================================
+            MOBILE NAVIGATION
+=====================================================*/
+
+.mobile-nav{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:300px;
+
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        rgba(12,16,30,.98),
+        rgba(8,10,18,.98)
+    );
+
+    backdrop-filter:blur(30px);
+
+    border-left:1px solid rgba(255,255,255,.08);
+
+    transition:.45s ease;
+
+    z-index:99999;
+
+    padding:30px;
+
+}
+
+.mobile-nav.active{
+
+    right:0;
+
+}
+
+/*========================*/
+
+.mobile-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+.close-menu{
+
+    font-size:34px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/*========================*/
+
+.mobile-nav ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.mobile-nav li{
+
+    margin-bottom:20px;
+
+}
+
+.mobile-nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.mobile-nav a:hover{
+
+    color:#ff7d72;
+
+    padding-left:10px;
+
+}
+
+/*========================*/
+
+.mobile-enroll{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff9671
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+/*========================*/
+
+@media(min-width:769px){
+
+.mobile-nav{
+
+display:none;
+
+}
+
+}

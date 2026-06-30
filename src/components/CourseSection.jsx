@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "../styles/home-course-section.css";
 const COURSES = [
   {
     id: "ai",
@@ -65,41 +65,41 @@ const COURSES = [
 
 function CourseSection() {
   return (
-    <section className="section" id="courses">
+    <section className="home-courses" id="courses">
 
-      <div className="sec-head">
+      <div className="home-course-head">
 
         <p className="eyebrow">~/courses</p>
 
         <h2>Our Courses</h2>
 
-        <p className="sec-sub">
+        <p className="home-course-sub">
           Choose your career path and become industry ready.
         </p>
 
       </div>
 
-      <div className="course-grid">
+      <div className="home-course-grid">
 
         {COURSES.map((course) => (
 
           <Link
             key={course.id}
             to={`/courses/${course.id}`}
-            className="card"
+            className="home-course-card"
           >
 
-            <span className="card-glyph">
+            <span className="home-course-icon">
               {course.icon}
             </span>
 
             <h3>{course.title}</h3>
 
-            <p className="card-tag">
+            <p className="home-course-tag">
               {course.subtitle}
             </p>
 
-            <span className="card-link">
+            <span className="home-course-link">
               View Details →
             </span>
 

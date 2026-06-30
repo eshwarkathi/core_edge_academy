@@ -1,10 +1,22 @@
 import logoMark from "../assets/logo-mark.png";
 
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
+
 function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="foot">
+
+      {/* ==========================
+              TOP
+      ========================== */}
 
       <div className="foot-top">
 
@@ -18,9 +30,11 @@ function Footer() {
 
           <span className="brand-name">
             Core Edge
+
             <span className="brand-sub">
               Academy
             </span>
+
           </span>
 
         </a>
@@ -28,14 +42,83 @@ function Footer() {
         <nav className="foot-links">
 
           <a href="/#courses">Courses</a>
-          <a href="/#audience">Who It's For</a>
-          <a href="/#why">Why Us</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/#contact">Contact</a>
+
+          <a href="/#audience">
+            Who It's For
+          </a>
+
+          <a href="/#why">
+            Why Us
+          </a>
+
+          <a href="/#faq">
+            FAQ
+          </a>
+
+          <a href="/#contact">
+            Contact
+          </a>
 
         </nav>
 
       </div>
+
+      {/* ==========================
+          SOCIAL MEDIA
+      ========================== */}
+
+      <div className="footer-social">
+
+        <a
+          href="https://www.facebook.com/share/1EkZv7xPQp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <FaFacebookF />
+        </a>
+
+        <a
+          href="https://www.instagram.com/coreedge_accademy?igsh=YXFmMmgzNzVmdmJw"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/core-edge-academy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <FaYoutube />
+        </a>
+
+        <a
+          href="https://wa.me/918885492139"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
+
+      </div>
+
+      {/* ==========================
+          CONTACT
+      ========================== */}
 
       <div className="foot-contact">
 
@@ -44,15 +127,18 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <span className="foot-k">Address</span>
 
-          1st Everest, Block C,
+          <span className="foot-k">
+            Address
+          </span>
+
+          1st Everest, Block C
           <br />
 
-          Aditya Enclave,
+          Aditya Enclave
           <br />
 
-          Ameerpet,
+          Ameerpet
           <br />
 
           Hyderabad - 500038
@@ -61,7 +147,9 @@ function Footer() {
 
         <a href="tel:+918885492139">
 
-          <span className="foot-k">Phone</span>
+          <span className="foot-k">
+            Phone
+          </span>
 
           +91 88854 92139
 
@@ -69,13 +157,19 @@ function Footer() {
 
         <a href="mailto:coreedgeacademy@gmail.com">
 
-          <span className="foot-k">Email</span>
+          <span className="foot-k">
+            Email
+          </span>
 
           coreedgeacademy@gmail.com
 
         </a>
 
       </div>
+
+      {/* ==========================
+          BOTTOM
+      ========================== */}
 
       <div className="foot-bottom">
 

@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 import HiringPartners from "../components/HiringPartners";
 import Enroll from "../pages/Enroll";
 import Successstories from "../components/Successstories";
-
+import "../styles/home-course-section.css";
 function Home() {
   return (
     <Layout>

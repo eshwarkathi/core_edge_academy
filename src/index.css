@@ -645,8 +645,9 @@ ul, ol { list-style: none; }
 
     color:#BFC7D8;
 
-    font-size:19px;
+    font-size:20px;
 
+    margin: auto;
     line-height:1.8;
 
 }
@@ -871,12 +872,36 @@ font-size:34px;
 
 }
 
+@media (max-width:768px){
+
 .sec-sub{
 
-font-size:17px;
+    font-size:17px;
+
+    max-width:100%;
+
+    padding:0 15px;
+
+    margin:15px auto 0;
+
+    text-align:center;
+
+}
+@media (max-width:480px){
+
+.sec-sub{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    padding:0 10px;
 
 }
 
+}
+
+}
 .card{
 
 padding:30px;
@@ -1874,6 +1899,7 @@ font-size:16px;
   display: flex;
   flex-wrap: wrap;
   gap: clamp(1.2rem, 4vw, 3rem);
+  margin-top:0%;
 }
 .foot-contact a {
   font-size: 0.9rem;
@@ -2417,16 +2443,26 @@ line-height:1.7;
 .contact-card p{
     overflow-wrap:break-word;
     word-break:break-word;
+    
+    
 }
 
-.contact-card h3{
-    margin:0 0 10px;
+..contact-card h3{
+    margin:12px 0 18px;
+    font-size:32px;
+    font-weight:600;
+    line-height:1.2;
+    color:#fff;
+    text-align:center;
 }
 
 .contact-card p{
     margin:0;
-    line-height:1.0;
-    word-break:break-word;
+    font-size:18px;
+    color:#BFC7D8;
+    line-height:1.7;
+    text-align:center;
+    width:100%;
 }
 /*======================*/
 /* TESTIMONIALS */
@@ -3544,6 +3580,58 @@ height:90px;
 
 font-size:18px;
 
+}
+
+}
+
+
+
+.footer-social{
+    display:flex;
+    justify-content:right;
+    align-items:right;
+    gap:18px;
+    margin:25px 200px;
+}
+
+.footer-social a{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    color:#fff;
+    text-decoration:none;
+    transition:.35s ease;
+}
+
+.footer-social a svg{
+    font-size:20px;
+}
+
+.footer-social a:hover{
+    transform:translateY(-6px);
+    background:linear-gradient(135deg,#ff5f6d,#ff9671);
+    box-shadow:0 10px 30px rgba(255,95,109,.35);
+}
+
+@media(max-width:768px){
+
+.footer-social{
+    gap:14px;
+    margin:25px 0;
+}
+
+.footer-social a{
+    width:42px;
+    height:42px;
+}
+
+.footer-social a svg{
+    font-size:18px;
 }
 
 }

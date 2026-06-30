@@ -1,6 +1,10 @@
 import "../styles/header.css";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+
+import { IoClose } from "react-icons/io5";
 
 function Header() {
   const navigate = useNavigate();
@@ -106,10 +110,12 @@ function Header() {
 
         {/* Mobile */}
 
-        <div className="mobile-menu">
-          <HiOutlineMenuAlt3 />
+        <div
+          className="mobile-menu"
+          onClick={() => setMenuOpen(true)}
+          >
+            <HiOutlineMenuAlt3 />
         </div>
-
       </div>
     </header>
   );

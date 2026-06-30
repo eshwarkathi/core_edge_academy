@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import CountUp from "react-countup";
 import "../styles/course.css";
-
+import "../styles/course.css";
 import CourseHero from "./courses/CourseHero";
 import CourseCompanies from "./courses/CourseCompanies";
 import CourseOverview from "./courses/CourseOverview";
