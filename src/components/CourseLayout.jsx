@@ -1,37 +1,13 @@
-import { Link } from "react-router-dom";
 import Layout from "./Layout";
-import CountUp from "react-countup";
-import "../styles/course.css";
-import "../styles/course.css";
 import CourseHero from "./courses/CourseHero";
-import CourseCompanies from "./courses/CourseCompanies";
 import CourseOverview from "./courses/CourseOverview";
 import CourseJourney from "./courses/CourseJourney";
 import CourseStats from "./courses/CourseStats";
-import CourseTools from "./courses/CourseTools";
 import CourseCurriculum from "./courses/CourseCurriculum";
 import CourseCareer from "./courses/CourseCareer";
 import CoursePlacement from "./courses/CoursePlacement";
 import CourseHighlights from "./courses/CourseHighlights";
 import CourseTechnologies from "./courses/CourseTechnologies";
-import CourseFAQ from "./courses/CourseFAQ";
-import CourseCTA from "./courses/CourseCTA";
-
-import infosys from "../assets/companies/infosys.png";
-import tcs from "../assets/companies/tcs.png";
-import accenture from "../assets/companies/accenture.png";
-import wipro from "../assets/companies/wipro.png";
-import ibm from "../assets/companies/ibm.png";
-import deloitte from "../assets/companies/deloitte.png";
-
-const COMPANY_LOGOS = [
-  { name: "Infosys", logo: infosys },
-  { name: "TCS", logo: tcs },
-  { name: "Accenture", logo: accenture },
-  { name: "Wipro", logo: wipro },
-  { name: "IBM", logo: ibm },
-  { name: "Deloitte", logo: deloitte },
-];
 
 function CourseLayout({
   image,
@@ -42,6 +18,7 @@ function CourseLayout({
   mode,
   rating,
   students,
+   brochure,
 
   highlights = [],
   curriculum = [],
@@ -70,6 +47,7 @@ function CourseLayout({
   students={students}
   duration={duration}
   mode={mode}
+  brochure={brochure} 
 />
         {/* Overview */}
 

@@ -1,67 +1,122 @@
-# Core Edge Academy — Website
+# Core Edge Academy Website
 
 Marketing site for Core Edge Academy, an industry-ready IT training institute in
-Ameerpet, Hyderabad. Built with **React + Vite**, dark "console" aesthetic using
-the brand palette (`#EC5667` · `#E09176` · `#030303` · `#1F2032`).
+Ameerpet, Hyderabad. Built with React + Vite.
 
-## Run locally
+## Run Locally
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev
 ```
 
-## Build & preview production
+The local dev URL is usually `http://localhost:5173`.
+
+## Build And Preview
 
 ```bash
-npm run build      # outputs to dist/
-npm run preview    # serves the built dist/ locally
+npm run build
+npm run preview
 ```
 
-Deploy the `dist/` folder to any static host (Netlify, Vercel, Cloudflare Pages,
-GitHub Pages, S3, etc.).
+Deploy the generated `dist/` folder to any static host such as Netlify, Vercel,
+Cloudflare Pages, GitHub Pages, or S3.
 
-## Project structure
+## Project Structure
 
-```
-index.html                  # head, fonts, SEO meta + JSON-LD structured data
-src/
-  main.jsx                  # React entry
-  App.jsx                   # whole single-page site (all sections + data arrays)
-  index.css                 # design system + all styles
-  assets/
-    logo-full.png           # full logo lockup (source)
-    logo-mark.png           # cropped coral icon (used in nav/footer)
+```text
+index.html
+package.json
+vite.config.js
+
 public/
-  logo.png                  # favicon / apple-touch / manifest icon
-  og-image.png              # 1200x630 social share image
+  logo.png
   manifest.webmanifest
+  og-image.png
   robots.txt
   sitemap.xml
+
+scripts/
+  og-image.html
+
+src/
+  main.jsx
+  App.jsx
+  index.css
+
+  assets/
+    companies/
+    courses/
+    logo-full.png
+    logo-mark.png
+
+  components/
+    courses/
+    Audience.jsx
+    Contact.jsx
+    CourseLayout.jsx
+    CourseSection.jsx
+    FAQ.jsx
+    Footer.jsx
+    Header.jsx
+    Hero.jsx
+    HiringPartners.jsx
+    Layout.jsx
+    Successstories.jsx
+    WhyUs.jsx
+
+  data/
+    courses.js
+
+  pages/
+    Home.jsx
+    Enroll.jsx
+    ArtificialIntelligence.jsx
+    AutomationTesting.jsx
+    BusinessAnalyst.jsx
+    CyberSecurity.jsx
+    DataAnalytics.jsx
+    DevOps.jsx
+    FlutterDevelopment.jsx
+    FullStackDevelopment.jsx
+    ScrumMaster.jsx
+    TableauAI.jsx
+
+  styles/
+    shared/
+    home/
+    course/
+    pages/
+    legacy/
 ```
 
-Page sections live in `App.jsx`: Hero → Tech marquee → Courses → Who It's For →
-Why Us (bento) → Approach → FAQ → Contact → Footer. Content is driven by the
-`COURSES`, `PILLARS`, `TECH`, `AUDIENCE`, `FAQS`, `NAV`, and `SOCIALS` arrays near
-the top of the file — edit those to change copy.
+## Where To Edit
 
-## Before going live — checklist
+Home page sections live in `src/pages/Home.jsx` and are implemented as separate
+components in `src/components`.
 
-- [ ] **Domain.** Replace every `https://www.coreedgeacademy.com` placeholder with
-      the real domain (in `index.html`, `public/robots.txt`, `public/sitemap.xml`,
-      `public/manifest.webmanifest`).
-- [ ] **LinkedIn URL is a guess.** `linkedin.com/in/core-edge-academy` appears in
-      the footer (`SOCIALS` in `App.jsx`) and in `index.html` JSON-LD `sameAs`.
-      Confirm or replace with the real profile/company page.
-- [ ] **Email.** No public email is on the site yet — contact is phone + WhatsApp
-      (`+91 88854 92139`). Add one if wanted.
-- [ ] **Geo coordinates.** `index.html` JSON-LD uses the Ameerpet area lat/long
-      (`17.4374, 78.4487`). Replace with the exact building coordinates for precise
-      Google Maps / local SEO.
+Course page content lives in `src/data/courses.js`.
 
-## Accessibility & quality notes
+Home page styles live in `src/styles/home`.
 
-- Responsive from 390px up; mobile slide-in nav.
-- Keyboard focus rings, skip link, `aria-current` on the active nav item.
-- `prefers-reduced-motion` disables the typing effect, marquee, float, and reveals.
-- No console errors; production build is ~50 KB gzipped JS + ~4 KB CSS.
+Shared layout, header, footer, button, and responsive styles live in
+`src/styles/shared`.
+
+Course page styles live in `src/styles/course`.
+
+Page-specific styles, such as the enroll page, live in `src/styles/pages`.
+
+Older CSS kept for compatibility during cleanup lives in `src/styles/legacy`.
+
+## Before Going Live
+
+- Replace every `https://www.coreedgeacademy.com` placeholder with the real domain.
+- Confirm the LinkedIn URL used in the footer and `index.html`.
+- Confirm email, phone, address, and map details.
+- Confirm local SEO details in `index.html`, `robots.txt`, and `sitemap.xml`.
+
+## Quality Notes
+
+- Built with React Router and Vite.
+- Responsive layout with mobile navigation.
+- Production build outputs to `dist/`.

@@ -117,7 +117,7 @@ function Scuccessstories() {
   ];
 
   return (
-    <section className="section" id="Successstories">
+    <section className="section" id="successstories">
 
       <div className="sec-head">
 

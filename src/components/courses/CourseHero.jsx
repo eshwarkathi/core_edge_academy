@@ -15,6 +15,7 @@ function CourseHero({
   students,
   duration,
   mode,
+  brochure,
 }) {
   return (
     <section className="course-hero">
@@ -124,14 +125,14 @@ function CourseHero({
               <FaArrowRight />
 
             </button>
-
-            <button className="hero-secondary">
-
+            <a
+              href={brochure}
+              download={`${title}-Brochure`}
+              className="hero-secondary"
+              >
               <FaDownload />
-
-              Download Brochure
-
-            </button>
+               Download Brochure
+            </a>
 
           </div>
 

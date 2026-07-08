@@ -1,0 +1,393 @@
+/* ---------- Courses ---------- *//*==================================================
+            PREMIUM COURSES SECTION
+==================================================*/
+
+.section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:100px 7%;
+
+    background:#070B14;
+
+}
+
+/* Background Glow */
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    background:radial-gradient(circle,
+    rgba(255,95,109,.12),
+    transparent);
+
+    top:-250px;
+
+    left:-250px;
+
+    filter:blur(120px);
+
+}
+
+.section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:radial-gradient(circle,
+    rgba(255,150,113,.10),
+    transparent);
+
+    bottom:-180px;
+
+    right:-180px;
+
+    filter:blur(120px);
+
+}
+
+/*====================================*/
+
+.sec-head{
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:70px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.eyebrow{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#ff7b70;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.sec-head h2{
+
+    color:white;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+.sec-sub{
+
+    color:#BFC7D8;
+
+    font-size:20px;
+
+    margin: auto;
+    line-height:1.8;
+
+}
+
+/*====================================*/
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*====================================*/
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    padding:38px;
+
+    border-radius:26px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.05),
+
+        rgba(255,255,255,.02)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.45s;
+
+}
+
+/* Glow */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,95,109,.22),
+
+        transparent
+
+    );
+
+    top:-130px;
+
+    right:-130px;
+
+    transition:.45s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#ff6d73;
+
+    box-shadow:
+
+    0 25px 70px rgba(255,95,109,.18);
+
+}
+
+.card:hover::before{
+
+    transform:scale(1.3);
+
+}
+
+/*====================================*/
+
+.card-glyph{
+
+    width:78px;
+
+    height:78px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ff5f6d,
+
+        #ff9671
+
+    );
+
+    color:white;
+
+    font-size:34px;
+
+    margin-bottom:28px;
+
+    box-shadow:
+
+    0 15px 40px rgba(255,95,109,.25);
+
+}
+
+.card h3{
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+    margin-bottom:15px;
+
+}
+
+.card-tag{
+
+    color:#BFC7D8;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.card-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#ff9671;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.card:hover .card-link{
+
+    transform:translateX(8px);
+
+}
+
+/*====================================*/
+
+@media(max-width:992px){
+
+.sec-head h2{
+
+font-size:42px;
+
+}
+
+.course-grid{
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+}
+
+}
+
+@media(max-width:768px){
+
+.section{
+
+padding:80px 20px;
+
+}
+
+.sec-head h2{
+
+font-size:34px;
+
+}
+
+@media (max-width:768px){
+
+.sec-sub{
+
+    font-size:17px;
+
+    max-width:100%;
+
+    padding:0 15px;
+
+    margin:15px auto 0;
+
+    text-align:center;
+
+}
+@media (max-width:480px){
+
+.sec-sub{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    padding:0 10px;
+
+}
+
+}
+
+}
+.card{
+
+padding:30px;
+
+}
+
+.card h3{
+
+font-size:22px;
+
+}
+
+}
+

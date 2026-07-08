@@ -1,4 +1,3 @@
-import "../styles/header.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
@@ -75,7 +74,7 @@ function Header() {
               </li>
 
               <li>
-                <button onClick={() => handleNavigation("Successstories")}>
+                <button onClick={() => handleNavigation("successstories")}>
                   Success Stories
                 </button>
               </li>
@@ -131,8 +130,8 @@ function Header() {
           Courses
         </button>
 
-        <button onClick={() => handleNavigation("Scuccessstories")}>
-          Scuccess Stories
+        <button onClick={() => handleNavigation("successstories")}>
+          Success Stories
         </button>
 
         <button onClick={() => handleNavigation("why")}>

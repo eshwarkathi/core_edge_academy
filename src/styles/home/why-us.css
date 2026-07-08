@@ -1,0 +1,304 @@
+/* ---------- Why (bento) ---------- */
+/*==================================================
+            WHY CHOOSE US
+==================================================*/
+
+#why{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:100px 7%;
+
+    background:#070B14;
+
+}
+
+/*========================*/
+
+#why::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,95,109,.15),
+
+    transparent);
+
+    filter:blur(120px);
+
+}
+
+#why::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,150,113,.12),
+
+    transparent);
+
+    filter:blur(120px);
+
+}
+
+/*========================*/
+
+.why-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+/*========================*/
+
+.why-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.05),
+
+        rgba(255,255,255,.02)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.45s;
+
+}
+
+/* Glow */
+
+.why-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,95,109,.20),
+
+        transparent
+
+    );
+
+    transition:.45s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#ff6d73;
+
+    box-shadow:
+
+    0 25px 70px rgba(255,95,109,.18);
+
+}
+
+.why-card:hover::before{
+
+    transform:scale(1.3);
+
+}
+
+/*========================*/
+
+.why-icon{
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:38px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #ff5f6d,
+
+        #ff9671
+
+    );
+
+    margin-bottom:28px;
+
+    box-shadow:
+
+    0 20px 45px rgba(255,95,109,.28);
+
+}
+
+/*========================*/
+
+.why-card h3{
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    margin-bottom:18px;
+
+}
+
+/*========================*/
+
+.why-card p{
+
+    color:#BFC7D8;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/*========================*/
+
+.why-card:hover .why-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    transition:.35s;
+
+}
+
+/*========================*/
+
+@media(max-width:992px){
+
+.why-grid{
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+}
+
+}
+
+@media(max-width:768px){
+
+#why{
+
+padding:80px 20px;
+
+}
+
+.why-grid{
+
+gap:25px;
+
+}
+
+.why-card{
+
+padding:30px;
+
+}
+
+.why-icon{
+
+width:70px;
+
+height:70px;
+
+font-size:32px;
+
+}
+
+.why-card h3{
+
+font-size:22px;
+
+}
+
+.why-card p{
+
+font-size:16px;
+
+}
+
+}

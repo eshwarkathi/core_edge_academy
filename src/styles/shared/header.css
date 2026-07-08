@@ -86,7 +86,7 @@
 
 .logo:hover img{
 
-    transform:rotate(-8deg) scale(1.08);
+    transform: scale(1.10);
 
 }
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../styles/Enroll.css";
+import "../styles/pages/enroll.css";
 
 const courses = [
   "Artificial Intelligence",

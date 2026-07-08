@@ -1,0 +1,129 @@
+/*==========================================
+        HIRING PARTNERS
+==========================================*/
+
+.hiring-section{
+
+    padding:50px 0;
+
+    background:#070B14;
+    
+    overflow:hidden;
+    
+}
+
+.sec-head h2{
+  color:#ff6d73;
+}
+.logo-slider{
+
+    width:100%;
+
+    overflow:hidden;
+
+    margin-top:70px;
+
+    position:relative;
+
+}
+
+.logo-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:scrollLogos 30s linear infinite;
+
+}
+
+.logo-slider:hover .logo-track{
+
+    animation-play-state:paused;
+
+}
+
+.logo-card{
+
+    width:220px;
+
+    height:70px;
+
+    margin:0 15px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+.logo-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff6d73;
+
+    box-shadow:
+
+    0 15px 40px rgba(255,95,109,.25);
+
+}
+
+@keyframes scrollLogos{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+/*====================*/
+
+@media(max-width:768px){
+
+.logo-card{
+
+width:170px;
+
+height:90px;
+
+font-size:18px;
+
+}
+
+}
+
+
+

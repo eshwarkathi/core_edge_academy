@@ -14,6 +14,7 @@ export const courses = {
   ai: {
     image: aiImg,
   title: "Artificial Intelligence",
+  brochure: "/brochures/ai_moudles.jpeg",
 
   subtitle: "Become an Industry Ready AI Engineer with Live Projects",
 
@@ -108,6 +109,7 @@ export const courses = {
   testing: {
      image: testingImg,
   title: "Manual & Automation Testing",
+  brochure: "/brochures/Testing_broucher.jfif",
 
   subtitle: "Learn. Practice. Get Hired.",
 
@@ -249,6 +251,7 @@ export const courses = {
   ba: {
      image: baImg,
   title: "Business Analyst",
+  brochure: "/brochures/BA_brochure.jpeg",
  
 
   subtitle: "Bridge Business & Technology",
@@ -357,6 +360,7 @@ export const courses = {
   data: {
     image: dataImg,
     title: "Data Analytics",
+    brochure: "/brochures/da_brochure.jfif",
 
   subtitle: "Become a Job-Ready Data Analyst with AI",
 
@@ -477,6 +481,7 @@ export const courses = {
   devops: {
      image: devopsImg,
   title: "DevOps",
+  brochure: "/brochures/devops-brochure.jfif",
 
   subtitle: "Master DevOps & Cloud with AWS",
 
@@ -635,6 +640,7 @@ export const courses = {
     fsd:{
          image: fsdImg,
 title:"Full Stack Development",
+brochure:"/brochures/fsd_broucher.jfif",
 
 subtitle:"Master React, Node.js & MongoDB",
 
@@ -771,6 +777,7 @@ placement:[
   flutter: {
   image: flutterImg,
   title: "Flutter Development",
+  brochure: "/brochures/flutter%20devlopment_broucher.jfif",
 
   subtitle: "Build Android, iOS & Web Applications",
 
@@ -875,6 +882,7 @@ placement:[
   scrum: {
   image: scrumImg,
   title: "Scrum Master",
+  brochure: "/brochures/scrum_beoucher.jfif",
 
   subtitle: "Master Agile & Scrum Framework",
 
@@ -961,6 +969,7 @@ placement:[
   tableau: {
   image: tableauImg,
   title: "Tableau with AI",
+  brochure: "/brochures/tableau-brochure.jfif",
 
   subtitle: "Become a Data Visualization Expert",
 

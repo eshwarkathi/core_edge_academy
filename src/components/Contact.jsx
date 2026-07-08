@@ -35,7 +35,6 @@ function Contact() {
         <div className="contact-card">
 
           <h3>📞 Phone</h3>
-
           <p>+91 8885492139</p>
 
           <h3>📧 Email</h3>
