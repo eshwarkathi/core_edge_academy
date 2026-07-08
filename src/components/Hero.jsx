@@ -1,44 +1,58 @@
+import { useState } from "react";
+import DemoModal from "./DemoModal";
+
 function Hero() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <section className="hero" id="home">
-      <div className="hero-grid"></div>
+    <>
+      <section className="hero" id="home">
+        <div className="hero-grid"></div>
 
-     <div className="hero-glow-left"></div>
+        <div className="hero-glow-left"></div>
 
-     <div className="hero-glow-right"></div>
-     <div className="hero-content">
+        <div className="hero-glow-right"></div>
 
-        <span className="hero-tag">
-          LEARN • BUILD • SUCCEED
-        </span>
+        <div className="hero-content">
+          <span className="hero-tag">
+            LEARN • BUILD • SUCCEED
+          </span>
 
-        <h1>
-          Build Your Tech Career
-          <br />
-         <span> with Core Edge Academy</span>
+          <h1>
+            Build Your Tech Career
+            <br />
+            <span> with Core Edge Academy</span>
+          </h1>
 
-        </h1>
+          <p>
+            Learn from industry experts, work on live projects,
+            and get placement assistance with top companies.
+          </p>
 
-        <p>
-          Learn from industry experts, work on live projects,
-          and get placement assistance with top companies.
-        </p>
-
-        <div className="hero-buttons">
-          <button
-            onClick={() => {
-            document.getElementById("courses")?.scrollIntoView({
-            behavior: "smooth",
-            });
-            }}
+          <div className="hero-buttons">
+            <button
+              onClick={() => {
+                document.getElementById("courses")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
             >
-            Explore Courses
-          </button>
-          <button>Book Free Demo</button>
-        </div>
+              Explore Courses
+            </button>
 
-      </div>
-    </section>
+            <button onClick={() => setOpen(true)}>
+              Book Free Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Popup Modal */}
+      <DemoModal
+        open={open}
+        onClose={() => setOpen(false)}
+      />
+    </>
   );
 }
 

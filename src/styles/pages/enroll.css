@@ -16,6 +16,7 @@
   background:#020617;
   color:white;
   overflow:hidden;
+ 
 }
 /* ===================================
    MAIN GRID
@@ -27,6 +28,9 @@
   gap:28px;
   margin-top:-10px;
   margin-bottom:30px;
+  padding-bottom:30px;
+  padding-top:120px;
+
 }
 
 /* ===================================
@@ -40,12 +44,13 @@
   rgba(10,18,45,.95),
   rgba(4,8,25,.98));
   
-  border:1px solid rgba(255,255,255,.08);
+  border:1px solid rgb(239, 81, 81);
 
   border-radius:24px;
 
   box-shadow:
   0 0 40px rgba(255,82,82,.08);
+  
 }
 
 /* ===================================
@@ -95,6 +100,7 @@
   gap:18px;
   padding:18px;
   border-radius:18px;
+  border:1px solid #ff7b7b;
   background:
   rgba(255,255,255,.03);
 }
@@ -103,6 +109,7 @@
   width:50px;
   height:50px;
   border-radius:18px;
+  border:1px solid white;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -144,8 +151,13 @@
   display:flex;
   align-items:center;
   gap:20px;
+    cursor:pointer;
+    transition:all .3s ease;
 }
-
+.call-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(37,99,235,.18);
+}
 .call-card span{
   font-size:28px;
 }
@@ -194,7 +206,7 @@
 
   border-radius:14px;
 
-  border:1px solid rgba(255,255,255,.08);
+  border:1px solid rgb(214, 81, 81);
 
   background:#071127;
 
@@ -212,7 +224,8 @@ textarea{
 
   border-radius:14px;
 
-  border:1px solid rgba(255,255,255,.08);
+
+  border:1px solid rgb(214, 81, 81);
 
   background:#071127;
 
@@ -227,8 +240,7 @@ textarea{
 
   height:72px;
 
-  border:none;
-
+  border: 1px solid white;
   border-radius:14px;
 
   background:
@@ -263,6 +275,7 @@ textarea{
   width:90%;
   max-width:1300px;
   margin:auto;
+
 }
 
 /* ======================
@@ -272,6 +285,7 @@ textarea{
 .contact-details{
   padding:35px;
   border-radius:24px;
+ 
 
   background:
   linear-gradient(
@@ -280,7 +294,6 @@ textarea{
     rgba(4,8,25,.98)
   );
 
-  border:1px solid rgba(255,255,255,.08);
 
   box-shadow:
   0 0 40px rgba(255,82,82,.08);
@@ -328,12 +341,13 @@ textarea{
   padding:10px;
 
   border-radius:28px;
+ 
 
   background:
   rgba(255,255,255,.03);
 
   border:
-  1px solid rgba(255,255,255,.05);
+  1px solid rgba(242, 4, 4, 0.99);
 
   transition:.3s;
 }
@@ -408,15 +422,15 @@ textarea{
   );
 
   border:
-  1px solid rgba(255,255,255,.08);
+  1px solid #ff5757;
 
   box-shadow:
   0 0 40px rgba(255,82,82,.08);
 }
 
 .map-box iframe{
-  width:90%;
-  height:90%;
+  width:100%;
+  height:100%;
   min-height:600px;
   border:none;
   display:block;
@@ -823,5 +837,118 @@ textarea{
 .cta-btn{
     font-size:16px;
 }
+
+}
+/* ================= Contact Popup ================= */
+
+.contact-popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.contact-popup{
+
+    width:380px;
+    max-width:90%;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    animation:popup .3s ease;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.contact-popup h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+    color:#0f172a;
+
+}
+
+.contact-popup p{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+}
+
+.contact-btn{
+
+    display:block;
+
+    text-decoration:none;
+
+    padding:16px;
+
+    margin-bottom:15px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.call-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.call-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+    color:#fff;
+
+}
+
+.whatsapp-btn:hover{
+
+    background:#1ea952;
+
+}
+
+.close-contact-popup{
+
+    border:none;
+
+    background:#f1f5f9;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    margin-top:10px;
+
+    width:100%;
 
 }

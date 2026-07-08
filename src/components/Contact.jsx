@@ -20,6 +20,11 @@ function Contact() {
 
           <h3>📍 Address</h3>
 
+          <a
+          href="https://maps.google.com/?q=Aditya+Enclave+Ameerpet+Hyderabad+500038"
+          target="_blank"
+          rel="noreferrer"
+        >
           <p>
             1st Floor, Everest Block,
             <br />
@@ -29,17 +34,22 @@ function Contact() {
             Hyderabad,
             Telangana - 500038
           </p>
+          </a>
 
         </div>
 
         <div className="contact-card">
 
           <h3>📞 Phone</h3>
-          <p>+91 8885492139</p>
+          
+        <a href="tel:+918885492139">+91 8885492139</a>
+          
 
           <h3>📧 Email</h3>
+           <a href="mailto:coreedgeacademy@gmail.com">
 
-          <p>coreedgeacademy@gmail.com</p>
+          coreedgeacademy@gmail.com
+          </a>
 
         </div>
 

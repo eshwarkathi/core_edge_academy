@@ -5,15 +5,16 @@ import "../styles/pages/enroll.css";
 
 const courses = [
   "Artificial Intelligence",
-  "Data Science",
-  "AWS Cloud",
-  "Azure Cloud",
+  "Data Analytics",
+  " Software Testing",
+  "Full Stack Development",
   "DevOps",
-  "Java Full Stack",
-  "Python Full Stack",
-  "Software Testing",
-  "Linux Administration",
-  "UI/UX Design",
+  "Scrum Master",
+  "Flutter Development",
+  "Business Analytics",
+  "Tableau with AI",
+  "Cyber Security",
+  "Frontend Development",
 ];
 
 const contactInfo = [
@@ -46,6 +47,8 @@ export default function Enroll() {
     mode: "",
     description: "",
   });
+   const [showContactPopup, setShowContactPopup] = useState(false);
+   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -54,15 +57,45 @@ export default function Enroll() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    console.log(formData);
+  const formDataToSend = new FormData();
 
-    alert(
-      "Thank you! Our Career Team will contact you soon."
+  formDataToSend.append("formType", "Enroll Now");
+  formDataToSend.append("fullName", formData.fullName);
+  formDataToSend.append("phone", formData.phone);
+  formDataToSend.append("email", formData.email);
+  formDataToSend.append("course", formData.course);
+  formDataToSend.append("mode", formData.mode);
+  formDataToSend.append("description", formData.description);
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxQXswSmYMupP6P4V4luN6l_Uxz1si-QI1VbGdWtwkn12nRhWUkKQWMruUrUdzG5XZZ/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataToSend,
+      }
     );
-  };
+
+    alert("🎉 Thank you! Our Career Team will contact you soon.");
+
+    setFormData({
+      fullName: "",
+      phone: "",
+      email: "",
+      course: "",
+      mode: "",
+      description: "",
+    });
+
+  } catch (err) {
+    console.error(err);
+    alert("Unable to submit the form.");
+  }
+};
 
   return (
     <>
@@ -136,7 +169,10 @@ export default function Enroll() {
 
 </div>
 
-<div className="call-card">
+<div
+  className="call-card"
+  onClick={() => setShowContactPopup(true)}
+>
   <span>📞</span>
 
   <div>
@@ -366,6 +402,46 @@ export default function Enroll() {
         </section>
 
       </div>
+      {showContactPopup && (
+  <div
+    className="contact-popup-overlay"
+    onClick={() => setShowContactPopup(false)}
+  >
+    <div
+      className="contact-popup"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <h3>Need Help?</h3>
+
+      <p>
+        Choose how you'd like to contact our Career Team.
+      </p>
+
+      <a
+        href="tel:+918885492139"
+        className="contact-btn call-btn"
+      >
+        📞 Call Now
+      </a>
+
+      <a
+        href="https://wa.me/918885492139"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-btn whatsapp-btn"
+      >
+        💬 WhatsApp
+      </a>
+
+      <button
+        className="close-contact-popup"
+        onClick={() => setShowContactPopup(false)}
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+)}
 
       <Footer />
 
