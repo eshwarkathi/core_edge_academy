@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../styles/pages/about.css";
+import "../styles/pages/About.css";
 import { BiFontSize } from "react-icons/bi";
 
 
