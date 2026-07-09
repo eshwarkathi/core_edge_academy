@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: "✉️",
     title: "Email",
-    value: "info@coreedgeacademy.com",
+    value: "coreedgeacademy@gmail.com",
     sub: "Quick response within 24 hours",
   },
   {
