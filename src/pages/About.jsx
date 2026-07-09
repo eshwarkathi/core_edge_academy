@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import DemoModal from "../components/DemoModal";
+
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaArrowRight,
   FaLaptopCode,
@@ -16,8 +18,10 @@ import Footer from "../components/Footer";
 import "../styles/pages/about.css";
 import { BiFontSize } from "react-icons/bi";
 
-const About = () => {
 
+const About = () => {
+const [open, setOpen] = useState(false);
+const navigate = useNavigate();
   
 
   const courses = [
@@ -138,26 +142,25 @@ const faqs = [
 
         <div className="about-buttons">
 
-          <Link
-            to="/courses"
-            className="about-btn-primary"
-          >
+          <button
+  className="about-btn-primary"
+  onClick={() => {
+    document.getElementById("courses")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Explore Courses
+  <FaArrowRight />
+</button>
 
-            Explore Courses
-
-            <FaArrowRight />
-
-          </Link>
-
-          <Link
-            to="/contact"
+          <button
             className="about-btn-secondary"
-          >
-
+            onClick={() => setOpen(true)}
+           >
             Book Free Demo
-
-          </Link>
-
+          </button>
         </div>
 
         <div className="about-hero-features">
@@ -655,7 +658,7 @@ alt="Training Lab"
       INDUSTRY READY COURSES
 =========================== */}
 
-<section className="about-courses">
+<section id="courses" className="about-courses">
 
   <div className="about-container">
 
@@ -873,15 +876,12 @@ alt="Training Lab"
 
         </Link>
 
-        <Link
-          to="/contact"
-          className="about-btn-secondary"
-        >
-
-          Book Free Demo
-
-        </Link>
-
+        <button
+  className="about-btn-secondary"
+  onClick={() => setOpen(true)}
+>
+  Book Free Demo
+</button>
       </div>
 
     </div>
@@ -890,6 +890,10 @@ alt="Training Lab"
 
 </section>
         </div>
+        <DemoModal
+  open={open}
+  onClose={() => setOpen(false)}
+/>
 
     <Footer />
   </>
