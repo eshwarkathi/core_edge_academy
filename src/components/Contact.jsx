@@ -1,72 +1,152 @@
+import { useState } from "react";
+
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbxQXswSmYMupP6P4V4luN6l_Uxz1si-QI1VbGdWtwkn12nRhWUkKQWMruUrUdzG5XZZ/exec";
+
+const initialFormData = {
+  fullName: "",
+  phone: "",
+  email: "",
+  course: "",
+  message: "",
+};
+
+const courses = [
+  "Artificial Intelligence",
+  "Data Analytics",
+  "Software Testing",
+  "Full Stack Development",
+  "DevOps",
+  "Scrum Master",
+  "Flutter Development",
+  "Business Analytics",
+  "Tableau with AI",
+  "Cyber Security",
+  "Frontend Development",
+];
+
 function Contact() {
+  const [formData, setFormData] = useState(initialFormData);
+  const [status, setStatus] = useState("idle");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("formType", "Contact Us");
+    formDataToSend.append("fullName", formData.fullName);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("course", formData.course);
+    formDataToSend.append("message", formData.message);
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataToSend,
+      });
+
+      setFormData(initialFormData);
+      setStatus("success");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  };
+
   return (
-    <section className="section" id="contact">
-
-      <div className="sec-head">
-
-        <p className="eyebrow">~/contact</p>
-
-        <h2>Contact Us</h2>
-
-        <p className="sec-sub">
-          Get in touch with our career advisors.
-        </p>
-
-      </div>
-
-      <div className="contact-grid">
-
-        <div className="contact-card">
-
-          <h3>📍 Address</h3>
-
-          <a
-          href="https://maps.google.com/?q=Aditya+Enclave+Ameerpet+Hyderabad+500038"
-          target="_blank"
-          rel="noreferrer"
-        >
+    <section className="section home-contact-section" id="contact">
+      <div className="home-contact-shell">
+        <div className="home-contact-copy">
+          <p className="eyebrow">~/contact</p>
+          <h2>Contact Us</h2>
           <p>
-            1st Floor, Everest Block,
-            <br />
-            Aditya Enclave,
-            <br />
-            Ameerpet,
-            Hyderabad,
-            Telangana - 500038
+            Share your details and our career advisor will contact you about
+            courses, batches, fees, or placement guidance.
           </p>
-          </a>
-
         </div>
 
-        <div className="contact-card">
+        <form className="home-contact-form" onSubmit={handleSubmit}>
+          <div className="home-contact-fields">
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              value={formData.fullName}
+              onChange={handleChange}
+              required
+            />
 
-          <h3>📞 Phone</h3>
-          
-        <a href="tel:+918885492139">+91 8885492139</a>
-          
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
 
-          <h3>📧 Email</h3>
-           <a href="mailto:coreedgeacademy@gmail.com">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          coreedgeacademy@gmail.com
-          </a>
+            <select
+              name="course"
+              value={formData.course}
+              onChange={handleChange}
+            >
+              <option value="">Select Course</option>
+              {courses.map((course) => (
+                <option key={course} value={course}>
+                  {course}
+                </option>
+              ))}
+            </select>
 
-        </div>
+            <textarea
+              rows="5"
+              name="message"
+              placeholder="Tell us what you want to know..."
+              value={formData.message}
+              onChange={handleChange}
+            />
+          </div>
 
-        <div className="contact-card">
+          <button
+            className="home-contact-submit"
+            type="submit"
+            disabled={status === "loading"}
+          >
+            {status === "loading" ? "Sending..." : "Send Message"}
+          </button>
 
-          <h3>🌐 Website</h3>
+          {status === "success" && (
+            <p className="home-contact-status success">
+              Thank you. Our team will contact you soon.
+            </p>
+          )}
 
-          <p>www.coreedgeacademy.com</p>
-
-          <h3>🕒 Timings</h3>
-
-          <p>Mon - Sat : 8 AM - 8 PM</p>
-
-        </div>
-
+          {status === "error" && (
+            <p className="home-contact-status error">
+              Unable to submit the form. Please try again.
+            </p>
+          )}
+        </form>
       </div>
-
     </section>
   );
 }

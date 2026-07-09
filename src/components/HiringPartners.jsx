@@ -1,18 +1,19 @@
 
+import accentureLogo from "../assets/companies/accenture.png";
+import deloitteLogo from "../assets/companies/deloitte.png";
+import ibmLogo from "../assets/companies/ibm.png";
+import infosysLogo from "../assets/companies/infosys.png";
+import tcsLogo from "../assets/companies/tcs.png";
+import wiproLogo from "../assets/companies/wipro.png";
+
 function HiringPartners() {
   const companies = [
-    "Infosys",
-    "TCS",
-    "Accenture",
-    "Wipro",
-    "IBM",
-    "Deloitte",
-    "Capgemini",
-    "Cognizant",
-    "Tech Mahindra",
-    "HCL",
-    "Oracle",
-    "Amazon",
+    { name: "Infosys", logo: infosysLogo },
+    { name: "TCS", logo: tcsLogo },
+    { name: "Accenture", logo: accentureLogo },
+    { name: "Wipro", logo: wiproLogo },
+    { name: "IBM", logo: ibmLogo },
+    { name: "Deloitte", logo: deloitteLogo },
   ];
 
   return (
@@ -36,8 +37,8 @@ function HiringPartners() {
 
           {[...companies, ...companies].map((company, index) => (
 
-            <div className="logo-card" key={index}>
-              {company}
+            <div className="logo-card" key={`${company.name}-${index}`}>
+              <img src={company.logo} alt={`${company.name} logo`} />
             </div>
 
           ))}

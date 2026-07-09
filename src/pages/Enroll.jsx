@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/pages/enroll.css";
@@ -39,6 +40,7 @@ const contactInfo = [
 ];
 
 export default function Enroll() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -49,6 +51,17 @@ export default function Enroll() {
   });
    const [showContactPopup, setShowContactPopup] = useState(false);
    const [loading, setLoading] = useState(false);
+
+  const goToHomeSection = (sectionId) => {
+    navigate("/");
+
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 150);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -133,16 +146,25 @@ export default function Enroll() {
 
             </p>
 
-            <div className="left-features">
+            <div
+              className="left-features"
+              onClick={(e) => {
+                const title = e.target
+                  .closest(".feature")
+                  ?.querySelector("h4")
+                  ?.textContent.trim();
 
-  <div className="feature">
-    <div className="feature-icon">🎓</div>
-    <div>
-      <h4>Expert Instructors</h4>
-      <p>Learn from real industry professionals.</p>
-    </div>
-  </div>
+                if (title === "Placement Assistance") {
+                  goToHomeSection("successstories");
+                }
 
+                if (title === "24/7 Student Support") {
+                  goToHomeSection("contact");
+                }
+              }}
+            >
+
+  
   <div className="feature">
     <div className="feature-icon">💼</div>
     <div>

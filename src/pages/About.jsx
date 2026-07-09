@@ -94,11 +94,11 @@ const faqs = [
   },
 ];
 
-  return (
-  <>
-    <Header />
+return (
+<>
+<Header />
 
-    <div className="about-page">
+<div className="about-page">
 {/* ===========================
         HERO SECTION
 =========================== */}
@@ -128,8 +128,7 @@ const faqs = [
         </h1>
 
         <p>
-
-          Core Edge Academy is one of Hyderabad's leading
+          Sinces 2025.<br></br> Core Edge Academy is one of Hyderabad's leading
           career-focused IT training institutes helping
           students and professionals become industry ready.
 
@@ -143,17 +142,17 @@ const faqs = [
         <div className="about-buttons">
 
           <button
-  className="about-btn-primary"
-  onClick={() => {
-    document.getElementById("courses")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Explore Courses
-  <FaArrowRight />
-</button>
+            className="about-btn-primary"
+            onClick={() => {
+            document.getElementById("courses")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            });
+            }}
+            >
+            Explore Courses
+            <FaArrowRight />
+          </button>
 
           <button
             className="about-btn-secondary"
@@ -225,7 +224,7 @@ const faqs = [
 
 </section>
 
-      <section className="about-company">
+<section className="about-company">
 
   <div className="about-container">
 
@@ -333,7 +332,7 @@ const faqs = [
   </div>
 
 </section>
-     {/* ===========================
+{/* ===========================
       MISSION & VISION
 =========================== */}
 
@@ -407,8 +406,7 @@ const faqs = [
   </div>
 
 </section>
-
-      {/* ===========================
+{/* ============================
       WHY CHOOSE US
 =========================== */}
 
@@ -488,7 +486,7 @@ const faqs = [
   </div>
 
 </section>
-            <section className="about-stats">
+<section className="about-stats">
 
   <div className="about-container">
 
@@ -531,10 +529,9 @@ const faqs = [
   </div>
 
 </section>
-      {/* ===========================
+{/* ============================
       LEARNING JOURNEY
 =========================== */}
-
 <section className="about-journey">
 
   <div className="about-container">
@@ -610,26 +607,26 @@ const faqs = [
 </section>
 <section className="about-gallery">
 
-<div className="about-container">
+  <div className="about-container">
 
-<div className="about-title">
+    <div className="about-title">
 
-<span>OUR CAMPUS</span>
+      <span>OUR CAMPUS</span>
 
-<h2>Explore Core Edge Academy</h2>
+     <h2>Explore Core Edge Academy</h2>
 
-<p>
+      <p>
 
-Experience our professional learning
-environment and modern classrooms.
+        Experience our professional learning
+        environment and modern classrooms.
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-<div className="about-gallery-grid">
+    <div className="about-gallery-grid">
 
-<img
+    <img
 src="src/assets/CE_images/CE_img_2.jpeg"
 alt="Office"
 />

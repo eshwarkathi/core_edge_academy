@@ -93,7 +93,7 @@ function Header() {
 
               <li>
                 <button onClick={() => handleNavigation("contact")}>
-                  Contact
+                  Contact Us
                 </button>
               </li>
 
@@ -103,7 +103,7 @@ function Header() {
           {/* Desktop Button */}
 
           <div className="header-btn">
-            <Link to="/Enroll">
+            <Link to="/enroll">
               <button>Enroll Now</button>
             </Link>
           </div>
@@ -153,11 +153,11 @@ function Header() {
         </button>
 
         <button onClick={() => handleNavigation("contact")}>
-          Contact
+          Contact Us
         </button>
 
         <Link
-          to="/Enroll"
+          to="/enroll"
           onClick={() => setMenuOpen(false)}
         >
           <button className="mobile-enroll">

@@ -11,6 +11,7 @@ import "./styles/shared/global.css";
 import "./styles/shared/header.css";
 import "./styles/course/hero.css";
 import "./styles/shared/buttons.css";
+import "./styles/shared/floating-whatsapp.css";
 import "./styles/course/index.css";
 import "./styles/shared/responsive.css";
 

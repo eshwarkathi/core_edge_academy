@@ -2053,3 +2053,152 @@ flex-direction:column;
 }
 
 }
+
+/*==================================================
+          COURSE PAGE SPACING REFINEMENT
+==================================================*/
+
+.course-page{
+    position:relative;
+}
+
+.course-page .course-hero{
+    min-height:auto;
+    padding:clamp(115px, 12vw, 145px) clamp(20px, 6vw, 6%) clamp(48px, 6vw, 68px);
+}
+
+.course-page .hero-container{
+    gap:clamp(34px, 5vw, 56px);
+}
+
+.course-page .hero-badge{
+    margin-bottom:18px;
+}
+
+.course-page .hero-left h1{
+    margin-bottom:14px;
+}
+
+.course-page .hero-left h2{
+    margin-bottom:18px;
+}
+
+.course-page .stats-strip,
+.course-page .hero-buttons{
+    margin-top:30px;
+}
+
+.course-page .overview-section,
+.course-page .journey-section,
+.course-page .stats-section,
+.course-page .tools-section,
+.course-page .curriculum-section,
+.course-page .career-section,
+.course-page .placement-section,
+.course-page .highlights-section,
+.course-page .technologies-section,
+.course-page .faq-section,
+.course-page .course-section{
+    padding:clamp(42px, 5.5vw, 66px) clamp(20px, 7vw, 8%);
+}
+
+.course-page .course-companies{
+    padding:clamp(30px, 4vw, 44px) clamp(20px, 7vw, 8%) clamp(42px, 5vw, 60px);
+}
+
+.course-page .course-cta{
+    padding:clamp(54px, 7vw, 82px) clamp(20px, 7vw, 8%);
+}
+
+.course-page .section-title{
+    margin-bottom:28px;
+}
+
+.course-page .section-title h2{
+    margin-top:8px;
+}
+
+.course-page .course-section h2,
+.course-page .companies-title{
+    margin-bottom:28px;
+}
+
+.course-page .stats-grid,
+.course-page .tools-grid,
+.course-page .curriculum-wrapper,
+.course-page .career-grid,
+.course-page .placement-grid,
+.course-page .highlights-grid,
+.course-page .technology-grid,
+.course-page .faq-wrapper{
+    margin-top:34px;
+}
+
+.course-page .overview-grid,
+.course-page .journey-wrapper,
+.course-page .grid{
+    gap:24px;
+}
+
+.course-page .overview-card{
+    padding:clamp(26px, 4vw, 34px);
+}
+
+.course-page .feature-card,
+.course-page .stats-card,
+.course-page .tool-card,
+.course-page .career-card,
+.course-page .placement-card,
+.course-page .highlight-card,
+.course-page .technology-card,
+.course-page .box{
+    padding:clamp(22px, 3vw, 30px);
+}
+
+.course-page .journey-item h3{
+    margin-top:18px;
+}
+
+.course-page .journey-item p{
+    margin-top:8px;
+}
+
+.course-page .cta-content{
+    padding:clamp(38px, 6vw, 58px);
+}
+
+@media(max-width:768px){
+    .course-page .course-hero{
+        padding:100px 18px 42px;
+    }
+
+    .course-page .overview-section,
+    .course-page .journey-section,
+    .course-page .stats-section,
+    .course-page .tools-section,
+    .course-page .curriculum-section,
+    .course-page .career-section,
+    .course-page .placement-section,
+    .course-page .highlights-section,
+    .course-page .technologies-section,
+    .course-page .faq-section,
+    .course-page .course-section,
+    .course-page .course-cta{
+        padding:34px 18px;
+    }
+
+    .course-page .stats-grid,
+    .course-page .tools-grid,
+    .course-page .curriculum-wrapper,
+    .course-page .career-grid,
+    .course-page .placement-grid,
+    .course-page .highlights-grid,
+    .course-page .technology-grid,
+    .course-page .faq-wrapper{
+        margin-top:24px;
+    }
+
+    .course-page .section-title{
+        margin-bottom:22px;
+    }
+}

@@ -132,9 +132,10 @@
     line-height:1.08;
 
     letter-spacing:-3px;
-
+    letter-spacing:-2px;
     color:white;
-
+    font-size: 4.5rem;
+    
     margin-bottom:30px;
 
 }
@@ -145,9 +146,10 @@
 
         180deg,
 
-        white,
+            white,
 
-        #d9d9d9
+        #ab1919
+      
 
     );
 

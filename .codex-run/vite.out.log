@@ -1,0 +1,70 @@
+
+> core-edge-academy@1.0.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m518[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m8:30:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:30:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:30:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:31:20 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:31:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:32:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:32:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:34:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:36:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.jsx[22m
+[2m8:37:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Enroll.jsx[22m
+[2m8:51:17 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Enroll.jsx[22m
+[2m8:51:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Enroll.jsx[22m
+[2m8:51:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles/pages/enroll.css[22m
+[2m8:52:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/HiringPartners.jsx[22m
+[2m8:52:21 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:52:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles/shared/header.css[22m
+[2m8:52:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m8:53:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Header.jsx[22m
+[2m8:58:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles/course/index.css[22m
+[2m9:03:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:03:51 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:05:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:05:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:05:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:05:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:05:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:06:02 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:06:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:06:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:06:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:07:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:08:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:08:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:08:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:10:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:12:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:12:35 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:13:48 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:20 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:14:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:15:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:16:18 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:16:33 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:16:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:16:44 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:16:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:17:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:17:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:17:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:17:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:17:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:18:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:18:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:25:44 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m9:25:45 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/main.jsx[22m
+[2m9:25:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:26:23 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
