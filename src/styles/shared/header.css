@@ -127,27 +127,25 @@
 /*=====================================
             NAVIGATION
 ======================================*/
+/*=====================================
+            NAVIGATION
+======================================*/
 
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
     list-style:none;
-
 }
 
-/* Remove button styles */
+/* Style BOTH buttons and links */
 
-.nav-links button{
+.nav-links button,
+.nav-links a{
 
     position:relative;
 
     background:none;
-
     border:none;
 
     color:#d6dce8;
@@ -164,21 +162,28 @@
 
     transition:.35s;
 
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 /* Hover */
 
-.nav-links button:hover{
+.nav-links button:hover,
+.nav-links a:hover{
 
-    color:white;
+    color:#fff;
 
     background:rgba(255,255,255,.06);
 
 }
 
-/* Animated underline */
+/* Underline */
 
-.nav-links button::after{
+.nav-links button::after,
+.nav-links a::after{
 
     content:"";
 
@@ -196,8 +201,7 @@
 
     border-radius:30px;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
         #ff5f6d,
         #ff9671
@@ -207,12 +211,29 @@
 
 }
 
-.nav-links button:hover::after{
+.nav-links button:hover::after,
+.nav-links a:hover::after{
 
     width:70%;
 
 }
+/*=====================================
+            ACTIVE LINK
+======================================*/
 
+.nav-links .nav-active{
+
+    color:#ff7d72;
+
+    background:rgba(255,125,114,.08);
+
+}
+
+.nav-links .nav-active::after{
+
+    width:70%;
+
+}
 /*=====================================
                 BUTTON
 ======================================*/

@@ -347,15 +347,15 @@ export default function Enroll() {
 
     </div>
 
-  <div className="map-box premium-card">
-  <iframe
-    title="Core Edge Academy Location"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.489221823675!2d78.44273257516608!3d17.43628338345921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ce78998625%3A0x416e342171b4c4!2sCORE%20EDGE%20ACADEMY!5e0!3m2!1sen!2sin!4v1782730411386!5m2!1sen!2sin" 
-    height="100%"
-    style={{
-      border: 0,
-      borderRadius: "18px",
-    }}
+    <div className="map-box premium-card">
+      <iframe
+        title="Core Edge Academy Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.489221823675!2d78.44273257516608!3d17.43628338345921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ce78998625%3A0x416e342171b4c4!2sCORE%20EDGE%20ACADEMY!5e0!3m2!1sen!2sin!4v1782730411386!5m2!1sen!2sin" 
+        height="100%"
+        style={{
+        border: 0,
+        borderRadius: "18px",
+        }}
     loading="lazy"
     allowFullScreen
     referrerPolicy="no-referrer-when-downgrade"

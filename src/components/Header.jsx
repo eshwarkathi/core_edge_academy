@@ -68,6 +68,12 @@ function Header() {
               </li>
 
               <li>
+                <Link to="/about">
+                  About us
+                </Link>
+              </li>
+
+              <li>
                 <button onClick={() => handleNavigation("courses")}>
                   Courses
                 </button>
@@ -81,7 +87,7 @@ function Header() {
 
               <li>
                 <button onClick={() => handleNavigation("why")}>
-                  About
+                  Why Us
                 </button>
               </li>
 
@@ -126,6 +132,14 @@ function Header() {
           Home
         </button>
 
+        <Link
+          to="/about"
+          onClick={() => setMenuOpen(false)}
+          className="mobile-link"
+        >
+          About Us
+        </Link>
+
         <button onClick={() => handleNavigation("courses")}>
           Courses
         </button>
@@ -135,7 +149,7 @@ function Header() {
         </button>
 
         <button onClick={() => handleNavigation("why")}>
-          About
+          Why Us
         </button>
 
         <button onClick={() => handleNavigation("contact")}>

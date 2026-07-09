@@ -13,6 +13,7 @@ import FlutterDevelopment from "./pages/FlutterDevelopment";
 import CyberSecurity from "./pages/CyberSecurity";
 import TableauAI from "./pages/TableauAI";
 import Enroll from "./pages/Enroll";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -70,6 +71,8 @@ function App() {
         element={<TableauAI />}
       />
       <Route path="/enroll" element={<Enroll />} />
+      <Route path="/about" element={<About />} />
+
 
 
     </Routes>
