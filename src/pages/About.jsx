@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import DemoModal from "../components/DemoModal";
-
+import cepImage from "../assets/CE_images/cep.jpeg";
+import cepbImage from "../assets/CE_images/CEpb.jpeg";
+import ceImg2 from "../assets/CE_images/CE_img_2.jpeg";
+import ceImg3 from "../assets/CE_images/CE_img_3.jpeg";
+import ceImg4 from "../assets/CE_images/CE_img_4.jpeg";
+import ceImg5 from "../assets/CE_images/CE_img_5.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FaArrowRight,
@@ -207,7 +212,7 @@ return (
         <div className="about-image-box">
 
           <img
-            src="src/assets/CE_images/cep.jpeg"
+            src={cepImage}
             alt="Core Edge Academy"
           />
 
@@ -233,7 +238,7 @@ return (
       <div className="about-company-image">
 
         <img
-          src="src/assets/CE_images/CEpb.jpeg"
+          src={cepbImage}
           alt="Core Edge Academy"
         />
 
@@ -627,22 +632,22 @@ return (
     <div className="about-gallery-grid">
 
     <img
-src="src/assets/CE_images/CE_img_2.jpeg"
+src={ceImg2}
 alt="Office"
 />
 
 <img
-src="src/assets/CE_images/CE_img_3.jpeg"
+src={ceImg3}
 alt="Office"
 />
 
 <img
-src="src/assets/CE_images/CE_img_4.jpeg"
+src={ceImg4}
 alt="Classroom"
 />
 
 <img
-src="src/assets/CE_images/CE_img_5.jpeg"
+src={ceImg5}
 alt="Training Lab"
 />
 

@@ -6,6 +6,7 @@ import {
   FaDownload,
   FaArrowRight,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function CourseHero({
   image,
@@ -17,6 +18,11 @@ function CourseHero({
   mode,
   brochure,
 }) {
+  const navigate = useNavigate();
+
+  const handleEnrollClick = () => {
+    navigate(`/enroll?course=${encodeURIComponent(title)}`);
+  };
   return (
     <section className="course-hero">
 
@@ -118,7 +124,7 @@ function CourseHero({
 
           <div className="hero-buttons">
 
-            <button className="hero-primary">
+            <button className="hero-primary" onClick={handleEnrollClick}>
 
               Enroll Now
 

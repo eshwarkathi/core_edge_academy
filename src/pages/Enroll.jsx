@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Header from "../components/Header";
+import { saveVisitorProfile } from "../utils/visitorProfile";
 import Footer from "../components/Footer";
 import "../styles/pages/enroll.css";
 
@@ -41,16 +42,29 @@ const contactInfo = [
 
 export default function Enroll() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const courseFromURL = searchParams.get("course");
+
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     email: "",
-    course: "",
+    course: courseFromURL || "",
     mode: "",
     description: "",
   });
-   const [showContactPopup, setShowContactPopup] = useState(false);
-   const [loading, setLoading] = useState(false);
+  const [showContactPopup, setShowContactPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
+  useEffect(() => {
+    if (courseFromURL) {
+      setFormData((prev) => ({
+        ...prev,
+        course: courseFromURL,
+      }));
+    }
+  }, [courseFromURL]);
 
   const goToHomeSection = (sectionId) => {
     navigate("/");
@@ -72,40 +86,59 @@ export default function Enroll() {
 
   const handleSubmit = async (e) => {
   e.preventDefault();
+  setLoading(true);
 
-  const formDataToSend = new FormData();
+  const payload = new URLSearchParams();
 
-  formDataToSend.append("formType", "Enroll Now");
-  formDataToSend.append("fullName", formData.fullName);
-  formDataToSend.append("phone", formData.phone);
-  formDataToSend.append("email", formData.email);
-  formDataToSend.append("course", formData.course);
-  formDataToSend.append("mode", formData.mode);
-  formDataToSend.append("description", formData.description);
+  payload.append("formType", "Enroll Now");
+  payload.append("fullName", formData.fullName);
+  payload.append("name", formData.fullName);
+  payload.append("phone", formData.phone);
+  payload.append("email", formData.email);
+  payload.append("emailId", formData.email);
+  payload.append("course", formData.course);
+  payload.append("mode", formData.mode);
+  payload.append("description", formData.description);
 
   try {
+    saveVisitorProfile(formData.fullName, formData.email);
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
     await fetch(
-      "https://script.google.com/macros/s/AKfycbxQXswSmYMupP6P4V4luN6l_Uxz1si-QI1VbGdWtwkn12nRhWUkKQWMruUrUdzG5XZZ/exec",
+      "https://script.google.com/macros/s/AKfycbwxFu-Fl8vas0E4wzBA6uzl5D3MXju55_cpmMWAF9i0Km5ROYRZatUjRJBJPil1GfcG/exec",
       {
         method: "POST",
         mode: "no-cors",
-        body: formDataToSend,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: payload,
+        signal: controller.signal,
       }
-    );
+    ).catch(() => {});
 
-    alert("🎉 Thank you! Our Career Team will contact you soon.");
+    clearTimeout(timeoutId);
 
-    setFormData({
-      fullName: "",
-      phone: "",
-      email: "",
-      course: "",
-      mode: "",
-      description: "",
-    });
+    setSuccessMessage("🎉 Thank you! Our Career Team will contact you soon.");
+    setLoading(false);
+
+    setTimeout(() => {
+      setFormData({
+        fullName: "",
+        phone: "",
+        email: "",
+        course: courseFromURL || "",
+        mode: "",
+        description: "",
+      });
+      setSuccessMessage("");
+    }, 2000);
 
   } catch (err) {
     console.error(err);
+    setLoading(false);
     alert("Unable to submit the form.");
   }
 };
@@ -304,9 +337,16 @@ export default function Enroll() {
               <button
                 className="submit-btn"
                 type="submit"
+                disabled={loading}
               >
-                Enroll Now →
+                {loading ? "Submitting..." : "Enroll Now →"}
               </button>
+
+              {successMessage && (
+                <p className="success-message" style={{ color: "#22c55e", textAlign: "center", marginTop: "12px" }}>
+                  {successMessage}
+                </p>
+              )}
 
             </form>
 

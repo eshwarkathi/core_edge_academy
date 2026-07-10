@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { saveVisitorProfile } from "../utils/visitorProfile";
 
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxQXswSmYMupP6P4V4luN6l_Uxz1si-QI1VbGdWtwkn12nRhWUkKQWMruUrUdzG5XZZ/exec";
+  "https://script.google.com/macros/s/AKfycbwxFu-Fl8vas0E4wzBA6uzl5D3MXju55_cpmMWAF9i0Km5ROYRZatUjRJBJPil1GfcG/exec";
 
 const initialFormData = {
   fullName: "",
@@ -40,26 +41,41 @@ function Contact() {
     e.preventDefault();
     setStatus("loading");
 
-    const formDataToSend = new FormData();
-    formDataToSend.append("formType", "Contact Us");
-    formDataToSend.append("fullName", formData.fullName);
-    formDataToSend.append("phone", formData.phone);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("course", formData.course);
-    formDataToSend.append("message", formData.message);
+    const payload = new URLSearchParams();
+    payload.append("formType", "Contact Us");
+    payload.append("fullName", formData.fullName);
+    payload.append("name", formData.fullName);
+    payload.append("phone", formData.phone);
+    payload.append("email", formData.email);
+    payload.append("emailId", formData.email);
+    payload.append("course", formData.course);
+    payload.append("message", formData.message);
 
     try {
+      saveVisitorProfile(formData.fullName, formData.email);
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
-        body: formDataToSend,
-      });
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: payload,
+        signal: controller.signal,
+      }).catch(() => {});
+
+      clearTimeout(timeoutId);
 
       setFormData(initialFormData);
       setStatus("success");
+      setTimeout(() => setStatus("idle"), 2000);
     } catch (err) {
       console.error(err);
       setStatus("error");
+      setTimeout(() => setStatus("idle"), 2000);
     }
   };
 
@@ -136,7 +152,7 @@ function Contact() {
 
           {status === "success" && (
             <p className="home-contact-status success">
-              Thank you. Our team will contact you soon.
+              ✓ Thank you. Our team will contact you soon.
             </p>
           )}
 

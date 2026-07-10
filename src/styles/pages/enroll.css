@@ -485,7 +485,17 @@ font-size:18px;
 
 .enroll-wrapper{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
+    padding:80px 0 0;
+    padding-left:0;
+    gap:24px;
+
+}
+
+.left-box,
+.form-box{
+
+    width:100%;
 
 }
 
@@ -493,15 +503,97 @@ grid-template-columns:1fr;
 
 @media(max-width:768px){
 
-.left-box{
+.enroll-wrapper{
 
-padding:28px;
+    padding-top:60px;
+    gap:20px;
+
+}
+
+.left-box,
+.form-box{
+
+    padding:24px;
+    border-radius:22px;
 
 }
 
 .left-box h2{
 
-font-size:40px;
+font-size:34px;
+
+}
+
+.left-box>p{
+
+font-size:16px;
+line-height:1.8;
+
+}
+
+.feature{
+
+padding:16px;
+
+}
+
+.feature h4{
+
+font-size:17px;
+
+}
+
+.feature p{
+
+font-size:14px;
+
+}
+
+.call-card{
+
+padding:14px 16px;
+
+}
+
+.call-card h4{
+
+font-size:16px;
+
+}
+
+.form-box h2{
+
+font-size:30px;
+
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
+
+font-size:15px;
+
+}
+
+.form-grid input,
+.form-grid select{
+
+    height:56px;
+    padding:0 16px;
+
+}
+
+.form-grid textarea{
+
+    min-height:140px;
+    padding:16px;
+
+}
+
+.submit-btn{
+
+    height:56px;
+    font-size:16px;
 
 }
 
@@ -1342,25 +1434,55 @@ rotate(360deg);
 
 }
 
+.contact-map-section{
+
+    width:min(1320px, calc(100% - 24px));
+
+}
+
+.bottom-cta{
+
+    width:min(1320px, calc(100% - 24px));
+
+}
+
 }
 
 @media(max-width:768px){
 
 .contact-details{
 
-    padding:28px;
+    padding:24px;
 
 }
 
 .contact-heading h2{
 
-    font-size:34px;
+    font-size:30px;
+
+}
+
+.contact-card{
+
+    padding:20px;
+
+}
+
+.map-box{
+
+    min-height:320px;
 
 }
 
 .map-box iframe{
 
     height:320px;
+
+}
+
+.cta-content{
+
+    padding:40px 20px;
 
 }
 
