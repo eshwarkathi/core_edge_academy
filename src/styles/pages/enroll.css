@@ -189,7 +189,7 @@ rgba(8,14,28,.98));
 
 border:
 
-1px solid rgba(255,255,255,.18);
+1px solid rgba(255, 255, 255, 0.996);
 
 border-radius:30px;
 
@@ -251,7 +251,7 @@ padding:48px;
 .left-box,
 .form-box{
 
-border-color:rgba(255,255,255,.24);
+border-color:rgb(255, 255, 255);
 
 box-shadow:
 0 20px 70px rgba(0,0,0,.45),
@@ -266,6 +266,7 @@ display:inline-block;
 padding:8px 18px;
 
 border-radius:30px;
+
 
 background:rgba(255,77,90,.10);
 
@@ -348,7 +349,7 @@ padding:22px;
 
 background:rgba(255,255,255,.03);
 
-border:1px solid rgba(255,255,255,.06);
+border:1px solid rgba(255, 255, 255, 0.711);
 
 border-radius:20px;
 
@@ -675,9 +676,9 @@ font-size:15px;
 
     background:#111b31;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255, 254, 254, 0.592);
 
-    color:#fff;
+    color:#fbfbfb;
 
     font-size:16px;
 

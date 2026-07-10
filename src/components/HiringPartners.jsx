@@ -1,54 +1,68 @@
-
-import accentureLogo from "../assets/companies/accenture.png";
-import deloitteLogo from "../assets/companies/deloitte.png";
-import ibmLogo from "../assets/companies/ibm.png";
-import infosysLogo from "../assets/companies/infosys.png";
-import tcsLogo from "../assets/companies/tcs.png";
-import wiproLogo from "../assets/companies/wipro.png";
+import accentureLogo from "../assets/companies/Accenture.svg.webp";
+import deloitteLogo from "../assets/companies/Deloitte_logo.svg.webp";
+import ibmLogo from "../assets/companies/IBM_logo.svg.webp";
+import infosysLogo from "../assets/companies/Infosys_logo.svg.webp";
+import tcsLogo from "../assets/companies/TCS.svg.webp";
+import wiproLogo from "../assets/companies/Wipro.svg.webp";
 
 function HiringPartners() {
+
   const companies = [
-    { name: "Infosys", logo: infosysLogo },
     { name: "TCS", logo: tcsLogo },
+    { name: "Infosys", logo: infosysLogo },
     { name: "Accenture", logo: accentureLogo },
-    { name: "Wipro", logo: wiproLogo },
     { name: "IBM", logo: ibmLogo },
+    { name: "Wipro", logo: wiproLogo },
     { name: "Deloitte", logo: deloitteLogo },
   ];
 
   return (
+
     <section className="hiring-section">
 
-      <div className="sec-head">
+      <div className="container">
 
-        <p className="eyebrow">~/hiring-partners</p>
+        <div className="sec-head">
 
-        <h2>Our Hiring Partners</h2>
+          <p className="eyebrow">~/HIRING PARTNERS</p>
 
-        <p className="sec-sub">
-          Our students have opportunities with leading companies across India.
-        </p>
+          <h2>Our Hiring Partners</h2>
 
-      </div>
+          <p className="sec-sub">
+            Our students have opportunities with leading companies across India.
+          </p>
 
-      <div className="logo-slider">
+        </div>
 
-        <div className="logo-track">
+        <div className="logo-slider">
 
-          {[...companies, ...companies].map((company, index) => (
+          <div className="logo-track">
 
-            <div className="logo-card" key={`${company.name}-${index}`}>
-              <img src={company.logo} alt={`${company.name} logo`} />
-            </div>
+            {[...companies, ...companies].map((company, index) => (
 
-          ))}
+              <div className="logo-item" key={`${company.name}-${index}`}>
+
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  loading="lazy"
+                  draggable="false"
+                />
+
+              </div>
+
+            ))}
+
+          </div>
 
         </div>
 
       </div>
 
     </section>
+
   );
+
 }
 
 export default HiringPartners;

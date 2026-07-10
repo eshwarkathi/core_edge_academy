@@ -1,39 +1,215 @@
-/*==========================================
-        HIRING PARTNERS
-==========================================*/
+/*==================================================
+                HIRING PARTNERS
+==================================================*/
 
 .hiring-section{
-
-    padding:50px 0;
-
-    background:#070B14;
     
+    position:relative;
+
     overflow:hidden;
-    
+
+    padding:30px 0;
+
+    margin-top:-50px;
+
+    margin-bottom:0px;
+
+    background:
+        radial-gradient(circle at top, rgba(255,109,115,.08), transparent 40%),
+        linear-gradient(180deg,#070B14 0%,#090F1C 100%);
+
+}
+
+/*==================================
+        CONTENT CONTAINER
+==================================*/
+
+.hiring-section .container{
+
+    width:min(1400px,94%);
+
+    margin:0 auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==================================
+        BACKGROUND GLOW
+==================================*/
+
+.hiring-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:10%;
+
+    top:20%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle,
+        rgba(255,109,115,.12),
+        transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*==================================
+        HEADING
+==================================*/
+
+.sec-head{
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
 }
 
 .sec-head h2{
-  color:#ff6d73;
+
+    font-size:54px;
+
+    font-weight:800;
+
+    color:#ff6d73;
+
+    margin:22px 0 18px;
+
+    letter-spacing:-1px;
+
 }
+
+.sec-sub{
+
+    width:min(680px,90%);
+
+    margin:auto;
+
+    color:#e9ecf4;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 28px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,109,115,.22);
+
+    background:rgba(255,255,255,.03);
+
+    color:#ff6d73;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+}
+
+/*==================================
+        LOGO SLIDER
+==================================*/
+
 .logo-slider{
 
-    width:100%;
+    width:90%;
 
     overflow:hidden;
 
-    margin-top:70px;
+    margin-top:80px;
 
     position:relative;
 
 }
 
+/* Left Fade */
+
+.logo-slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:180px;
+
+    height:100%;
+
+    background:linear-gradient(to right,#070B14,transparent);
+
+    z-index:5;
+
+}
+
+/* Right Fade */
+
+.logo-slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+    width:180px;
+
+    height:100%;
+
+    background:linear-gradient(to left,#070B14,transparent);
+
+    z-index:5;
+
+}
+
+/*==================================
+        LOGO TRACK
+==================================*/
+
 .logo-track{
 
     display:flex;
 
+    align-items:center;
+
     width:max-content;
 
-    animation:scrollLogos 30s linear infinite;
+    animation:logoScroll 26s linear infinite;
 
 }
 
@@ -43,15 +219,11 @@
 
 }
 
-.logo-card{
+/*==================================
+        LOGO ITEM
+==================================*/
 
-    width:250px;
-
-    height:92px;
-
-    margin:0 18px;
-
-    border-radius:30px;
+.logo-item{
 
     display:flex;
 
@@ -59,58 +231,65 @@
 
     justify-content:center;
 
-    font-size:22px;
+    min-width:220px;
 
-    font-weight:700;
-
-    color:#111827;
-
-    background:
-
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.96),
-        rgba(238,244,255,.88)
-    );
-
-    border:1px solid rgba(255,255,255,.45);
-
-    backdrop-filter:blur(20px);
-
-    box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.85),
-    0 18px 44px rgba(0,0,0,.22);
+    margin:0 40px;
 
     transition:.35s;
 
 }
 
-.logo-card:hover{
+/*==================================
+        LOGOS
+==================================*/
 
-    transform:translateY(-8px);
+.logo-item img{
 
-    border-color:rgba(255,109,115,.55);
+    width:auto;
 
-    box-shadow:
-
-    inset 0 1px 0 rgba(255,255,255,.9),
-    0 20px 50px rgba(255,95,109,.22);
-
-}
-
-.logo-card img{
+    height:60px;
 
     max-width:180px;
 
-    max-height:60px;
-
     object-fit:contain;
 
-    filter:none;
+    opacity:.92;
+
+    transition:all .35s ease;
+
+    filter:
+        brightness(1)
+        contrast(1.05)
+        saturate(1.05)
+        drop-shadow(0 8px 18px rgba(0,0,0,.25));
 
 }
 
-@keyframes scrollLogos{
+.logo-item:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.logo-item:hover img{
+
+    transform:scale(1.08);
+
+    opacity:1;
+
+    filter:
+        brightness(1.08)
+        contrast(1.08)
+        saturate(1.15)
+        drop-shadow(0 0 18px rgba(255,109,115,.28));
+
+}
+
+/*==================================
+        ANIMATION
+==================================*/
+
+@keyframes logoScroll{
 
     from{
 
@@ -126,29 +305,79 @@
 
 }
 
-/*====================*/
+/*==================================
+        TABLET
+==================================*/
+
+@media(max-width:992px){
+
+.sec-head h2{
+
+    font-size:44px;
+
+}
+
+.logo-item{
+
+    min-width:180px;
+
+    margin:0 30px;
+
+}
+
+.logo-item img{
+
+    height:50px;
+
+}
+
+}
+
+/*==================================
+        MOBILE
+==================================*/
 
 @media(max-width:768px){
 
-.logo-card{
+.hiring-section{
 
-width:190px;
-
-height:82px;
-
-font-size:18px;
+    padding:70px 0;
 
 }
 
-.logo-card img{
+.sec-head h2{
 
-max-width:145px;
+    font-size:34px;
 
-max-height:52px;
+}
+
+.sec-sub{
+
+    font-size:16px;
+
+}
+
+.logo-item{
+
+    min-width:140px;
+
+    margin:0 22px;
+
+}
+
+.logo-item img{
+
+    height:38px;
+
+    max-width:120px;
+
+}
+
+.logo-slider::before,
+.logo-slider::after{
+
+    width:70px;
 
 }
 
 }
-
-
-

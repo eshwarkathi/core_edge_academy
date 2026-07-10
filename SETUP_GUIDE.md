@@ -35,7 +35,7 @@ Example: `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p`
 
 ## Step 4: Update React App (if URL changed)
 
-If you got a NEW deployment URL in Step 3, update all three files:
+If you got a NEW deployment URL in Step 3, update these files:
 
 **src/components/Contact.jsx**
 ```javascript
@@ -52,14 +52,9 @@ const GOOGLE_SCRIPT_URL = "YOUR_NEW_URL_HERE";
 const GOOGLE_SCRIPT_URL = "YOUR_NEW_URL_HERE";
 ```
 
-**src/App.jsx**
-```javascript
-const GOOGLE_SCRIPT_URL = "YOUR_NEW_URL_HERE";
-```
-
 ## Step 5: What Happens Automatically
 
-The script will create **4 separate sheets** in your Google Sheet:
+The script will create **3 separate sheets** in your Google Sheet:
 
 ### 1. **Contact Us Submissions**
 - Timestamp
@@ -88,14 +83,7 @@ The script will create **4 separate sheets** in your Google Sheet:
 - Description (if provided)
 - User Agent
 
-### 4. **Website Visits**
-- Timestamp
-- Full Name
-- Email
-- Page URL
-- Page Title
-- Referrer
-- User Agent
+If an old `Website Visits` tab already exists in your Google Sheet, delete that tab after deploying this updated script. The website no longer sends visit data.
 
 ## Features
 

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Header from "../components/Header";
-import { saveVisitorProfile } from "../utils/visitorProfile";
 import Footer from "../components/Footer";
 import "../styles/pages/enroll.css";
 
@@ -101,8 +100,6 @@ export default function Enroll() {
   payload.append("description", formData.description);
 
   try {
-    saveVisitorProfile(formData.fullName, formData.email);
-
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
 

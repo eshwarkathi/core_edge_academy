@@ -7,16 +7,14 @@ const SPREADSHEET_ID = "YOUR_SPREADSHEET_ID_HERE"; // Replace with your actual S
 const SHEET_NAMES = {
   "Contact Us": "Contact Us Submissions",
   "Book Free Demo": "Demo Bookings",
-  "Enroll Now": "Enrollments",
-  "Website Visit": "Website Visits"
+  "Enroll Now": "Enrollments"
 };
 
 // Define headers for each sheet type
 const SHEET_HEADERS = {
   "Contact Us": ["Timestamp", "Full Name", "Email", "Phone", "Course", "Message", "User Agent"],
   "Book Free Demo": ["Timestamp", "Full Name", "Email", "Phone", "Course", "User Agent"],
-  "Enroll Now": ["Timestamp", "Full Name", "Email", "Phone", "Course", "Mode", "Description", "User Agent"],
-  "Website Visit": ["Timestamp", "Full Name", "Email", "Page URL", "Page Title", "Referrer", "User Agent"]
+  "Enroll Now": ["Timestamp", "Full Name", "Email", "Phone", "Course", "Mode", "Description", "User Agent"]
 };
 
 function doPost(e) {
@@ -59,16 +57,6 @@ function doPost(e) {
         params.course || "",
         params.mode || "",
         params.description || "",
-        params.userAgent || ""
-      ];
-    } else if (formType === "Website Visit") {
-      rowData = [
-        new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-        params.fullName || params.name || "",
-        params.email || params.emailId || "",
-        params.page || params.pagePath || "",
-        params.pageTitle || "",
-        params.referrer || "",
         params.userAgent || ""
       ];
     } else {
@@ -134,8 +122,6 @@ function getHeaders(sheetName) {
     return SHEET_HEADERS["Book Free Demo"];
   } else if (sheetName === "Enrollments") {
     return SHEET_HEADERS["Enroll Now"];
-  } else if (sheetName === "Website Visits") {
-    return SHEET_HEADERS["Website Visit"];
   }
   return [];
 }

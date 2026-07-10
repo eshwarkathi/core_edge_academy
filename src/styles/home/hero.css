@@ -277,6 +277,10 @@ font-size:18px;
 
 }
 
+.hero-illustration {
+  display: none;
+}
+
 }
 
 @media(max-width:768px){

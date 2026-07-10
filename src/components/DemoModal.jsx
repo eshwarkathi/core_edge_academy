@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../styles/DemoModal.css";
-import { saveVisitorProfile } from "../utils/visitorProfile";
 
 const courses = [
   "Artificial Intelligence",
@@ -51,8 +50,6 @@ const handleSubmit = async (e) => {
   payload.append("description", "");
 
   try {
-    saveVisitorProfile(formData.fullName, formData.email);
-
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
 

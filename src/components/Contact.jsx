@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { saveVisitorProfile } from "../utils/visitorProfile";
 
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbwxFu-Fl8vas0E4wzBA6uzl5D3MXju55_cpmMWAF9i0Km5ROYRZatUjRJBJPil1GfcG/exec";
@@ -52,8 +51,6 @@ function Contact() {
     payload.append("message", formData.message);
 
     try {
-      saveVisitorProfile(formData.fullName, formData.email);
-
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
 
